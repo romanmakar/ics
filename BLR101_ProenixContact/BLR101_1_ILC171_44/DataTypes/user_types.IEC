@@ -1,0 +1,661 @@
+(*@PROPERTIES_EX@
+TYPE: DATA_TYPE
+LOCALE: 0
+*)
+TYPE
+	CycleCW	:												(*Cycle Control Word*)
+	STRUCT
+		AuxON	     		:	bool;
+		Start   			:	bool;
+		Stop    			:	bool;
+		PulseStart 			:	bool;
+		ACK		 			:	bool;
+		res5				: 	bool;
+		res6				: 	bool;
+		res7				: 	bool;
+		res8				: 	bool;
+		res9				: 	bool;
+		res10				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE
+
+TYPE
+	CycleSW	:												(*Cycle Status Word*)
+	STRUCT
+		ALARM 				:	bool;
+		ON					:	bool;
+		Running				: 	bool;
+		res3				: 	bool;
+		res4				: 	bool;
+		res5				: 	bool;
+		res6				: 	bool;
+		res7				: 	bool;
+		res8				: 	bool;
+		res9				: 	bool;
+		res10				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE
+
+TYPE
+	Cycle	:												(*Cycle Words*)
+	STRUCT
+		CW	 				:	CycleCW;
+		SW					:	CycleSW;
+	END_STRUCT;
+END_TYPE
+
+TYPE
+	Warn:													(*Boiler Warning Word*)
+	STRUCT
+		InputVoltage		: 	bool;
+		UPS					: 	bool;
+		UPS_Charging		: 	bool;
+		UPS_Discharging		: 	bool;
+		EmergStop			: 	bool;
+		CO2_CH4				: 	bool;
+		Fire				: 	bool;
+		Tout_hi				: 	bool;
+		Pout_lo				: 	bool;
+		Pout_hi				: 	bool;
+		Pbrng_hi			: 	bool;
+		Pfuel				: 	bool;
+		Fout_lo				: 	bool;
+		res1				: 	bool;
+		res2				: 	bool;
+		RecPmpDry			:	bool;
+	END_STRUCT;
+END_TYPE
+
+
+TYPE 
+	Snsr_CW:												(*Sensor Control Word*)
+	STRUCT
+		FltrEn				:	bool;
+		LimEn				:	bool;
+		SimEn				:	bool;
+		ExtFault			:	bool;
+		res4				:	bool;
+		res5				:	bool;
+		res6				:	bool;
+		res7				:	bool;
+		bar_kgf				: 	bool;
+		res9				: 	bool;
+		res10				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE
+
+TYPE 
+	Snsr_SW:												(*Sensor Status Word*)
+	STRUCT
+		Fault				: 	bool;
+		HH_alarm			: 	bool;
+		HL_alarm			: 	bool;
+		LH_alarm			: 	bool;
+		LL_alarm			: 	bool;
+		res5				: 	bool;
+		res6				: 	bool;
+		res7				: 	bool;
+		res8				: 	bool;
+		res9				:	bool;
+		res10				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE		
+
+TYPE 
+	Snsr_PLS:												(*Sensor Pulse Status*)
+	STRUCT
+		Fault_PLS			: 	bool;
+		HH_PLS				: 	bool;
+		HL_PLS				: 	bool;
+		LH_PLS				: 	bool;
+		LL_PLS				: 	bool;
+		res5				: 	bool;
+		res6				: 	bool;
+		res7				: 	bool;
+		res8				: 	bool;
+		res9				:	bool;
+		res10				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE		
+
+		
+TYPE 
+	Snsr:													(*Sensor Structure*)
+	STRUCT
+		CW					: 	Snsr_CW;
+		SW					: 	Snsr_SW;
+		k					: 	real;
+		b					: 	real;
+		ADC_Range			: 	int;
+		SamplingTime		: 	int;
+		HH					: 	real;
+		HL					: 	real;
+		LH					: 	real;
+		LL					: 	real;
+		DeadBand			: 	real;
+		LimDelay			: 	int;
+		DiagCode			: 	word;
+		res1				: 	real;
+		SimValue			: 	real;
+		PIW					: 	int;
+		IntValue			: 	int;
+		RealValue			: 	real;
+		AccumDir			: 	real;
+		AccumRev			: 	real;
+	END_STRUCT;
+END_TYPE
+
+TYPE
+	Snsr_Buff: ARRAY [0..9] OF REAL;
+END_TYPE
+	
+
+TYPE
+	Mot_CW:													(*Motor Control Word*)
+	STRUCT
+		Enable				:	bool;
+		AuxON				:	bool;
+		EnableAuto			:	bool;
+		DisableAuto			: 	bool;
+		ManStart			: 	bool;
+		ManStop				:	bool;
+		AutoON				: 	bool;
+		ACK					: 	bool;
+		ExtraEn				: 	bool;
+		ExtraAlarm			: 	bool;
+		SimEn				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE
+
+TYPE
+	Mot_SW:													(*Motor Status Word*)
+	STRUCT
+		Rem					: 	bool;
+		Auto				: 	bool;
+		RUN					: 	bool;
+		COM					: 	bool;
+		AlarmAccum			: 	bool;
+		ManOK				: 	bool;
+		AutoOK				: 	bool;
+		res7				: 	bool;
+		res8				: 	bool;
+		res9				: 	bool;
+		res10				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE
+
+TYPE 
+	Mot:													(*Motor Structure*)
+	STRUCT
+		CW					: 	Mot_CW;
+		SW					: 	Mot_SW;
+		MinFreq				: 	real;
+		MaxFreq				: 	real;
+		ManFreq				: 	real;
+		AutoFreq			: 	real;
+		ActFreq				: 	real;
+		Current				: 	real;
+		RunHours			: 	dword;
+		kWhCount			: 	dword;
+		Status				: 	word;
+		FC_StatusWord		: 	word;
+		FC_AlarmWord		: 	dword;
+		FC_WarnWord			: 	dword;
+		FC_ErrCode			: 	word;
+		Index				: 	word;
+		res1				: 	real;
+		res2				: 	real;
+		res3				: 	real;
+	END_STRUCT;
+END_TYPE
+
+TYPE
+	Vlv_CW:													(*Valve Control Word*)
+	STRUCT
+		Enable				: 	bool;
+		AuxON				:	bool;
+		EnableAuto			: 	bool;
+		DisableAuto			: 	bool;
+		ManOpen				: 	bool;
+		Stop				: 	bool;
+		ManClose			: 	bool;
+		AutoOpen			: 	bool;
+		AutoClose			: 	bool;
+		ACK					: 	bool;
+		ExtraEn				: 	bool;
+		ExtraAlarm			: 	bool;
+		SimEn				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE
+
+TYPE
+	Vlv_SW:													(*Valve Status Word*)
+	STRUCT
+		Rem					: 	bool;
+		Auto				: 	bool;
+		COM_Open			: 	bool;
+		COM_Close			: 	bool;
+		RUN					: 	bool;
+		Opened				: 	bool;
+		Closed				: 	bool;
+		AlarmAccum			: 	bool;
+		ManOK				: 	bool;
+		AutoOK				: 	bool;
+		res10				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE
+
+TYPE 
+	Vlv:													(*Valve Structure*)
+	STRUCT
+		CW					: 	Vlv_CW;
+		SW					: 	Vlv_SW;
+		SetPos				: 	real;
+		ActPos				: 	real;
+		Status				: 	word;
+		res0				: 	word;
+		res1				: 	real;
+		res2				: 	real;
+		res3				: 	real;
+		res4				: 	real;		
+	END_STRUCT;
+END_TYPE
+
+TYPE 
+	Rgltr_CW:													(*Regulator Control Word*)
+	STRUCT
+		En					: 	bool;
+		ManMode				: 	bool;
+		SimEn				: 	bool;
+		Reset				: 	bool;
+		Hold				:	bool;
+		res5				: 	bool;
+		res6				: 	bool;
+		res7				: 	bool;
+		res8				: 	bool;
+		res9				: 	bool;
+		res10				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE
+
+TYPE 
+	Rgltr_SW:													(*Regulator Status Word*)
+	STRUCT
+		Error				: 	bool;
+		LH					: 	bool;
+		LL					: 	bool;
+		res3				: 	bool;
+		res4				: 	bool;
+		res5				: 	bool;
+		res6				: 	bool;
+		res7				: 	bool;
+		res8				: 	bool;
+		res9				: 	bool;
+		res10				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE		
+		
+TYPE 
+	Rgltr:													(*Regulator Structure*)
+	STRUCT
+		CW					: 	Rgltr_CW;
+		SW					: 	Rgltr_SW;
+		SP					: 	real;
+		Kp					: 	real;
+		Tn					: 	real;
+		Tv					: 	real;
+		Td					: 	real;
+		Offset				: 	real;
+		ManVal				: 	real;
+		DeadBand			: 	real;
+		LH					: 	real;
+		LL					: 	real;
+		Y					: 	real;
+		DIFF				: 	real;
+		ActVal				: 	real;
+		res0				: 	real;
+		res1				: 	real;
+	END_STRUCT;
+END_TYPE
+
+TYPE
+	Brnr_CW:													(*Burner Control Word*)
+	STRUCT
+		Enable				: 	bool;
+		AuxON				:	bool;
+		EnableAuto			: 	bool;
+		DisableAuto			: 	bool;
+		ManStart			: 	bool;
+		ManStop				: 	bool;
+		AutoON				: 	bool;
+		ACK					: 	bool;
+		ExtraEn				: 	bool;
+		ExtraAlarm			: 	bool;
+		SimEn				: 	bool;
+		Ignition			: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE
+
+TYPE
+	Brnr_SW:													(*Burner Status Word*)
+	STRUCT
+		Rem					: 	bool;
+		Auto				: 	bool;
+		RUN					: 	bool;
+		COM					: 	bool;
+		AlarmAccum			: 	bool;
+		ManOK				: 	bool;
+		AutoOK				: 	bool;
+		res7				: 	bool;
+		FireOK				: 	bool;
+		IgnFireOK			: 	bool;
+		res10				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE
+
+TYPE
+	Brnr_AI : ARRAY [0..4] OF Snsr;
+END_TYPE
+
+(*TYPE
+	Brnr_AI:
+	STRUCT
+		P_gas				: 	Snsr;
+		P_air				: 	Snsr;
+		P_pzk				: 	Snsr;
+		F_gas				: 	Snsr;
+		Sens1				: 	Snsr;
+	END_STRUCT;
+END_TYPE*)
+
+
+TYPE
+	Brnr_Mot : ARRAY [0..1] OF Mot;
+END_TYPE
+
+(*TYPE
+	Brnr_Mot:
+	STRUCT
+		Fan					: 	Mot;
+		Mot0				: 	Mot;
+	END_STRUCT;
+END_TYPE*)
+
+TYPE
+	Brnr_Vlv : ARRAY [0..6] OF Vlv;
+END_TYPE
+
+(*TYPE
+	Brnr_Vlv:
+	STRUCT
+		PZK1				: 	Vlv;
+		PZK2				: 	Vlv;
+		PSK 				: 	Vlv;
+		Ign					: 	Vlv;
+		Gas					: 	Vlv;
+		Vlv0				: 	Vlv;
+		Vlv1				: 	Vlv;
+	END_STRUCT;
+END_TYPE*)
+
+TYPE
+	Brnr_Reg : ARRAY [0..2] OF Rgltr;
+END_TYPE
+
+(*TYPE
+	Brnr_Reg:
+	STRUCT
+		Reg1				: 	Rgltr;
+		Reg2				: 	Rgltr;
+		Reg3				: 	Rgltr;
+	END_STRUCT;
+END_TYPE*)
+
+TYPE 
+		WD: ARRAY [0..2] OF WORD;
+		AD: ARRAY [0..2] OF WORD;
+	Brnr_Sys:												(*Burner System Parameters Structure*)
+	STRUCT
+		MinSP				: 	real;
+		MaxSP				: 	real;
+		ManSP				: 	real;
+		AutoSP				: 	real;
+		Phase				: 	word;
+		CurrOut				: 	word;
+		CurrSP				: 	word;
+		CurrPV				: 	word;
+		FlameVal			: 	word;
+		CurrFuelThroughput	: 	word;
+		StartUpCount		: 	dword;
+		HoursCount			: 	dword;
+		ErrCode				: 	word;
+		DiagCode			: 	word;
+		ErrClass			:	word;
+		ErrPhase			: 	word;
+		TempLimOff_Trshld	: 	word;
+		DiscrInputs			: 	word;
+		DiscrOutputs		: 	word;
+		LoadCntrlOpMode		: 	word;
+		OperationMode		: 	word;
+		ModbusMode			: 	word;
+		RemoteMode			: 	word;
+		W3_SP				: 	word;
+		PredefOutputMode	: 	word;
+		W1_SP				: 	word;
+		W2_SP				: 	word;
+		res27				: 	word;
+		Weekday				: 	WD;
+		ActDate				: 	AD;
+		ActTime				: 	word;
+		res31				: 	word;
+		GasVol				: 	dword;
+		LockoutNum			: 	word;
+		ExtraTemp			: 	word;			
+		res35				: 	real;
+		res36				: 	real;
+		res37				: 	real;
+		res38				: 	real;
+		res39				: 	real;
+		res40				: 	real;
+		res41				: 	real;
+		res42				: 	word;
+		Status				:	word;	
+	END_STRUCT;
+END_TYPE
+
+	TYPE
+	Brnr :													(*Burner Structure*)
+	STRUCT
+		CW					: 	Brnr_CW;
+		SW					: 	Brnr_SW;
+		AI					: 	Brnr_AI;
+		M					: 	Brnr_Mot;
+		V					: 	Brnr_Vlv;
+		Reg					: 	Brnr_Reg;
+		Sys					: 	Brnr_Sys;
+	END_STRUCT;
+END_TYPE
+
+
+TYPE
+	Boil_AI : ARRAY [0..29] OF Snsr;
+END_TYPE
+
+(*TYPE
+	Boil_AI:											 
+	STRUCT
+		T_in				: Snsr;
+		T_out				: Snsr;
+		T_gas				: Snsr;
+		T_smoke				: Snsr;
+		T0					: Snsr;
+		T1					: Snsr;
+		T2					: Snsr;
+		T3					: Snsr;
+		T4					: Snsr;
+		T5					: Snsr;
+		P_in				: Snsr;
+		P_out				: Snsr;
+		P_pmp_in			: Snsr;
+		P_pmp_out			: Snsr;
+		P_gas				: Snsr;
+		P_burning			: Snsr;
+		P_smoke				: Snsr;
+		P0					: Snsr;
+		P1					: Snsr;
+		P2					: Snsr;
+		Q_CO				: Snsr;
+		Q_O2				: Snsr;
+		F_gas				: Snsr;
+		F_hc				: Snsr;
+		S0					: Snsr;
+		S1					: Snsr;
+		S2					: Snsr;
+		S3					: Snsr;
+		S4					: Snsr;
+		S5					: Snsr;
+	END_STRUCT;
+END_TYPE*) 
+
+TYPE
+	Boil_Mot : ARRAY [0..4] OF Mot;
+END_TYPE
+
+(*TYPE
+	Boil_Mot:										
+	STRUCT
+		Exhsr				: Mot;
+		Pmp					: Mot;
+		Mot0				: Mot;
+		Mot1				: Mot;
+		Mot2				: Mot;
+	END_STRUCT;
+END_TYPE*)
+
+TYPE
+	Boil_Vlv : ARRAY [0..6] OF Vlv;
+END_TYPE
+
+(*TYPE
+	Boil_Vlv:											
+	STRUCT
+		Gas					: Vlv;
+		Blr_in				: Vlv;
+		Blr_out				: Vlv;
+		Gate				: Vlv;
+		Vlv0				: Vlv;
+		Vlv1				: Vlv;
+		Vlv2				: Vlv;
+	END_STRUCT;
+END_TYPE*)
+
+TYPE
+	Boil_Reg : ARRAY [0..4] OF Rgltr;
+END_TYPE
+
+(*TYPE
+	Boil_Reg:											
+	STRUCT
+		Reg1				: Rgltr;
+		Reg2				: Rgltr;
+		Reg3				: Rgltr;
+		Reg4				: Rgltr;
+		Reg5				: Rgltr;
+	END_STRUCT;
+END_TYPE*)
+
+
+TYPE
+	Blr:												
+	STRUCT
+		Brn1				: 	Brnr;
+		Brn2				: 	Brnr;
+		Brn3				: 	Brnr;
+		Brn4				: 	Brnr;
+		Brn5				: 	Brnr;
+		Brn6				: 	Brnr;
+		Brn7				: 	Brnr;
+		Brn8				: 	Brnr;
+		Brn9				: 	Brnr;
+		Brn10				: 	Brnr;
+		Brn11				: 	Brnr;
+		Brn12				: 	Brnr;
+		Brn13				: 	Brnr;
+		Brn14				: 	Brnr;
+		Brn15				: 	Brnr;
+		Brn16				: 	Brnr;
+		AI					: 	Boil_AI;
+		M					: 	Boil_Mot;
+		V					: 	Boil_Vlv;
+		Reg					: 	Boil_Reg;
+	END_STRUCT;
+END_TYPE
+
+
+TYPE
+	SlvReadData : ARRAY [0..49] OF arrModbus2_W_1_125;
+END_TYPE
+
+

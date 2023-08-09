@@ -1,0 +1,280 @@
+
+(*Group:Sensor*)
+
+
+VAR_GLOBAL
+	P_in_PLS :	Snsr_PLS;
+	T_in_PLS :	Snsr_PLS;
+	T_out_PLS :	Snsr_PLS;
+	T_smoke_PLS :	Snsr_PLS;
+	BrnrFeedback :	Snsr;
+	ExhsrFeedback :	Snsr;
+	ExhsrGatePos :	Snsr;
+	RecPmpFeedback :	Snsr;
+	P_out_PLS :	Snsr_PLS;
+	P_gas_PLS :	Snsr_PLS;
+	P_internal_PLS :	Snsr_PLS;
+	P_exhsr_in_PLS :	Snsr_PLS;
+	F_hc_PLS :	Snsr_PLS;
+	P_pmp_in_PLS :	Snsr_PLS;
+	P_pmp_out_PLS :	Snsr_PLS;
+END_VAR
+
+
+(*Group:Motor*)
+
+
+VAR_GLOBAL
+	BrnrSP :	REAL;
+	ExhsrSP :	REAL;
+	RecPmpSP :	REAL;
+END_VAR
+
+
+(*Group:Valve*)
+(*Group:Reg*)
+(*Group:Main*)
+
+
+VAR_GLOBAL RETAIN 
+	Boiler :	Blr;
+	Cycle :	Cycle;
+END_VAR
+
+
+VAR_GLOBAL
+	arrMB_RTU_SL2_5_ReadData :	arrModbus2_W_1_125;
+	arrMB_RTU_SL2_4_ReadData :	arrModbus2_W_1_125;
+	arrMB_RTU_SL2_2_ReadData :	arrModbus2_W_1_125;
+	arrMB_RTU_SL3_2_ReadData :	arrModbus2_W_1_125;
+	arrMB_RTU_SL3_5_ReadData :	arrModbus2_W_1_125;
+	arrMB_RTU_SL3_1_ReadData :	arrModbus2_W_1_125;
+	arrMB_RTU_SL3_4_ReadData :	arrModbus2_W_1_125;
+	arrMB_RTU_SL2_1_ReadData :	arrModbus2_W_1_125;
+	WarningWord :	Warn;
+	TestFlag :	BOOL;
+END_VAR
+
+
+(*Group:ModBus*)
+
+
+VAR_GLOBAL
+	xMB_Srv1Err :	BOOL;
+	xMB_Srv1ACK :	BOOL;
+	xMB_Srv1AutoACK :	BOOL;
+END_VAR
+
+
+VAR_GLOBAL RETAIN 
+	arrMB_Srv1Data :	MB2_TCP_ARR_W_0_7167;
+END_VAR
+
+
+VAR_GLOBAL
+	udtMB_Data :	udtModbus2_Data;
+	arrIN_Address	AT %IB1 :	MB2_RSUNI_ARR_B_1_62;
+	arrOUT_Address	AT %QB1 :	MB2_RSUNI_ARR_B_1_62;
+	wBrnSP :	WORD;
+	arrFC3_ReadData :	arrModbus2_W_1_125;
+	arrSlvReadData :	SlvReadData;
+END_VAR
+
+
+(*Group:System Variables*)
+
+
+VAR_GLOBAL
+	PLCMODE_ON	AT %MX1.2016.0 :	BOOL {PDD};(*PLC status ON*)
+	PLCMODE_LOADING	AT %MX1.2017.0 :	BOOL;(*PLC status LOADING*)
+	PLCMODE_RUN	AT %MX1.7.0 :	BOOL;(*PLC status RUN*)
+	PLCMODE_STOP	AT %MX1.6.0 :	BOOL;(*PLC status STOP*)
+	PLCMODE_HALT	AT %MX1.8.0 :	BOOL;(*PLC status HALT*)
+	PLCDEBUG_BPSET	AT %MX1.2019.0 :	BOOL;(*Breakpoint set*)
+	PLCDEBUG_FORCE	AT %MX1.2018.0 :	BOOL;(*Variable(s) forced*)
+	PLCDEBUG_POWERFLOW	AT %MX1.2020.0 :	BOOL;(*Address status enabled*)
+	PLC_TICKS_PER_SEC	AT %MW1.2000 :	INT;(*System ticks per second*)
+	PLC_SYS_TICK_CNT	AT %MD1.0 :	DINT;(*Number of system ticks*)
+	PLC_TASK_AVAILABLE	AT %MW1.2012 :	INT;(*Number of available PLC tasks*)
+	PLC_SYSTASK_AVAILABLE	AT %MW1.2016 :	INT;(*Number of available system tasks*)
+	PLC_MAX_ERRORS	AT %MD1.2004 :	DINT;
+	PLC_ERRORS	AT %MD1.2008 :	DINT;
+	PLC_TASK_DEFINED	AT %MW1.4 :	INT;(*Number of tasks used*)
+	PLC_TASK_1	AT %MB1.5000 :	Task_Info_eCLR;(*Task 1 information*)
+	PLC_TASK_2	AT %MB1.5128 :	Task_Info_eCLR;(*Task 2 information*)
+	PLC_TASK_3	AT %MB1.5256 :	Task_Info_eCLR;(*Task 3 information*)
+	PLC_TASK_4	AT %MB1.5384 :	Task_Info_eCLR;(*Task 4 information*)
+	PLC_TASK_5	AT %MB1.5512 :	Task_Info_eCLR;(*Task 5 information*)
+	PLC_TASK_6	AT %MB1.5640 :	Task_Info_eCLR;(*Task 6 information*)
+	PLC_TASK_7	AT %MB1.5768 :	Task_Info_eCLR;(*Task 7 information*)
+	PLC_TASK_8	AT %MB1.5896 :	Task_Info_eCLR;(*Task 8 information*)
+	LICENSE	AT %MD1.60112 :	DWORD;(*License information*)
+	MASTER_DIAG_STATUS_REG_HI	AT %MB1.60001 :	BYTE;(*Master diagnostic status register high byte*)
+	MASTER_DIAG_STATUS_REG_LOW	AT %MB1.60000 :	BYTE;(*Master diagnostic status register low byte*)
+	MASTER_DIAG_STATUS_REG_BSA	AT %MX1.60140.0 :	BOOL;(*Bus segment disconnected*)
+	MASTER_DIAG_STATUS_REG_SYSFAIL	AT %MX1.60141.0 :	BOOL;(*System failure*)
+	MASTER_DIAG_STATUS_REG_RES	AT %MX1.60142.0 :	BOOL;(*Standard function processed negatively*)
+	MASTER_DIAG_STATUS_REG_SYNCRES	AT %MX1.60143.0 :	BOOL;(*Synchronization error*)
+	MASTER_DIAG_STATUS_REG_DCR	AT %MX1.60144.0 :	BOOL;(*Faulty data cycles*)
+	MASTER_DIAG_STATUS_REG_WARN	AT %MX1.60145.0 :	BOOL;(*Defined warning time exceeded*)
+	MASTER_DIAG_STATUS_REG_QUAL	AT %MX1.60146.0 :	BOOL;(*Defined error density exceeded*)
+	MASTER_DIAG_STATUS_REG_SSINFO	AT %MX1.60147.0 :	BOOL;(*Pending message*)
+	MASTER_DIAG_STATUS_REG_USER	AT %MX1.60148.0 :	BOOL;(*User error/parameterization*)
+	MASTER_DIAG_STATUS_REG_PF	AT %MX1.60149.0 :	BOOL;(*Peripheral fault*)
+	MASTER_DIAG_STATUS_REG_BUS	AT %MX1.60150.0 :	BOOL;(*Bus error*)
+	MASTER_DIAG_STATUS_REG_CTRL	AT %MX1.60151.0 :	BOOL;(*Fault on the controller board/hardware*)
+	MASTER_DIAG_STATUS_REG_DTC	AT %MX1.60152.0 :	BOOL;(*Diagnostic routine active*)
+	MASTER_DIAG_STATUS_REG_RUN	AT %MX1.60153.0 :	BOOL;(*Data transmission active*)
+	MASTER_DIAG_STATUS_REG_ACT	AT %MX1.60154.0 :	BOOL;(*Selected configuration ready to operate*)
+	MASTER_DIAG_STATUS_REG_RDY	AT %MX1.60155.0 :	BOOL;(*Controller board ready to operate*)
+	MASTER_DIAG_PARAM_REG_HI	AT %MB1.60003 :	BYTE;(*Master diagnostic parameter register high byte*)
+	MASTER_DIAG_PARAM_REG_LOW	AT %MB1.60002 :	BYTE;(*Master diagnostic parameter register low byte*)
+	MASTER_DIAG_PARAM_2_REG_HI	AT %MB1.60005 :	BYTE;(*Extended master diagnostic parameter register 2 high byte*)
+	MASTER_DIAG_PARAM_2_REG_LOW	AT %MB1.60004 :	BYTE;(*Extended master diagnostic parameter register 2 low byte*)
+	COP_DIAG_STATUS_REG_RT_ERR	AT %MX1.60156.0 :	BOOL;(*Runtime error (control processor)*)
+	COP_DIAG_STATUS_REG_FAT_ERR	AT %MX1.60157.0 :	BOOL;(*Fatal error (control processor)*)
+	COP_DIAG_STATUS_REG_WARN	AT %MX1.60158.0 :	BOOL;(*Warning (control processor)*)
+	COP_DIAG_STATUS_REG_PON	AT %MX1.60159.0 :	BOOL;(*Power on (control processor)*)
+	COP_DIAG_STATUS_REG_FC_RUN	AT %MX1.60160.0 :	BOOL;(*Runtime system RUN*)
+	COP_DIAG_STATUS_REG_FC_STOP	AT %MX1.60161.0 :	BOOL;(*Runtime system STOP*)
+	COP_DIAG_STATUS_REG_FC_HALT	AT %MX1.60162.0 :	BOOL;(*Runtime system HALT*)
+	COP_DIAG_STATUS_REG_FC_LDG	AT %MX1.60163.0 :	BOOL;(*Runtime system LOADING*)
+	COP_DIAG_STATUS_REG_FC_DBG	AT %MX1.60164.0 :	BOOL;(*Runtime system DEBUG*)
+	COP_DIAG_STATUS_REG_FC_RDO	AT %MX1.60165.0 :	BOOL;(*Runtime system READONLY*)
+	COP_DIAG_PARAM_REG	AT %MW1.60022 :	WORD;(*Diagnostic parameter register of the control processor*)
+	COP_DIAG_PARAM_2_REG	AT %MW1.60024 :	WORD;(*Extended diagnostic parameter register of the control processor*)
+	COP_CPU_LOAD_WARNING	AT %MX1.60182.0 :	BOOL;(*The controller is approaching its processor capacity limit*)
+	ONBOARD_INPUT	AT %MW1.60040 :	WORD;(*Local inputs*)
+	ONBOARD_INPUT_BIT0	AT %MX1.60183.0 :	BOOL;(*Local input IN1*)
+	ONBOARD_INPUT_BIT1	AT %MX1.60184.0 :	BOOL;(*Local input IN2*)
+	ONBOARD_INPUT_BIT2	AT %MX1.60185.0 :	BOOL;(*Local input IN3*)
+	ONBOARD_INPUT_BIT3	AT %MX1.60186.0 :	BOOL;(*Local input IN4*)
+	ONBOARD_INPUT_BIT4	AT %MX1.60187.0 :	BOOL;(*Local input IN5*)
+	ONBOARD_INPUT_BIT5	AT %MX1.60188.0 :	BOOL;(*Local input IN6*)
+	ONBOARD_INPUT_BIT6	AT %MX1.60189.0 :	BOOL;(*Local input IN7*)
+	ONBOARD_INPUT_BIT7	AT %MX1.60190.0 :	BOOL;(*Local input IN8*)
+	ONBOARD_OUTPUT_BIT0	AT %MX3.61000.0 :	BOOL;(*Local output OUT1*)
+	ONBOARD_OUTPUT_BIT1	AT %MX3.61001.0 :	BOOL;(*Local output OUT2*)
+	ONBOARD_OUTPUT_BIT2	AT %MX3.61002.0 :	BOOL;(*Local output OUT3*)
+	ONBOARD_OUTPUT_BIT3	AT %MX3.61003.0 :	BOOL;(*Local output OUT4*)
+	RTC_BATTERY_LOW	AT %MX1.60166.0 :	BOOL;(*Realtime clock battery capacity low*)
+	RTC_DATA_INVALID	AT %MX1.60167.0 :	BOOL;(*Realtime clock data invalid*)
+	FLASHCARD_PRESENT	AT %MX1.60168.0 :	BOOL;(*Phoenix Contact SD card inserted*)
+	ONBOARD_OUTPUT_OVERLOAD_0_3	AT %MX1.60169.0 :	BOOL;(*Local I/O overload*)
+	POWER_SUPPLY_MAIN_OK	AT %MX1.60171.0 :	BOOL;(*24 V main supply voltage OK*)
+	POWER_SUPPLY_INPUTS_OK	AT %MX1.60172.0 :	BOOL;(*24 V local input supply OK*)
+	POWER_SUPPLY_OUTPUTS_0_3_OK	AT %MX1.60173.0 :	BOOL;(*24 V local output supply OK (bits 0...3)*)
+	KEY_SWITCH_RESET	AT %MX1.60178.0 :	BOOL;(*Start/stop switch in MRESET position*)
+	KEY_SWITCH_STOP	AT %MX1.60179.0 :	BOOL;(*Start/stop switch in STOP position*)
+	KEY_SWITCH_RUN_PROG	AT %MX1.60181.0 :	BOOL;(*Start/stop switch in RUN/PROG position*)
+	RTC_HOURS	AT %MW1.60060 :	INT;(*System time (hours)*)
+	RTC_MINUTES	AT %MW1.60062 :	INT;(*System time (minutes)*)
+	RTC_SECONDS	AT %MW1.60064 :	INT;(*System time (seconds)*)
+	RTC_DAY	AT %MW1.60068 :	INT;(*System time (day)*)
+	RTC_MONTH	AT %MW1.60070 :	INT;(*System time (month)*)
+	RTC_YEAR	AT %MW1.60072 :	INT;(*System time (year)*)
+	PND_S1_PLC_RUN	AT %IX63972.0 :	BOOL;(*Status of the higher-level control system*)
+	PND_S1_VALID_DATA_CYCLE	AT %IX63973.0 :	BOOL;(*IO Controller has established the connection*)
+	PND_S1_OUTPUT_STATUS_GOOD	AT %IX63974.0 :	BOOL;(*IOP status of the higher-level control system*)
+	PND_S1_DATA_LENGTH	AT %IW63976 :	WORD;(*Process data length*)
+	PND_S1_OUTPUTS	AT %QB63988 :	PND_IO_256;(*Output process data*)
+	PND_S1_INPUTS	AT %IB63988 :	PND_IO_256;(*Input process data*)
+	PND_IO_DRIVEN_BY_PLC	AT %IW63978 :	INT;(*Number of the PLC currently connected with the PNIO Device*)
+	PND_RESET_FACTORY_SETTINGS	AT %MW3.61060 :	WORD;(*shows the bits of the kind of a reset to factory service*)
+	IB_DEVICE_PARAM_ACTIVATED	AT %MX1.60120.0 :	BOOL;(*Interbus device configuration activated*)
+	IB_DEVICE_PARAM_READY	AT %MX1.60121.0 :	BOOL;(*Interbus device configuration completed*)
+	IB_DEVICE_PARAM_ERROR	AT %MX1.60122.0 :	BOOL;(*Interbus device configuration error*)
+END_VAR
+
+
+VAR_GLOBAL RETAIN 
+	(*<APPMGR_APPLICATION_ID :	STRING;>*)
+END_VAR
+
+
+VAR_GLOBAL
+	(*<APPMGR_TEMPLATE_ID :	STRING;>*)
+END_VAR
+
+
+VAR_GLOBAL RETAIN 
+	(*<APPMGR_APPLICATION_NAME :	STRING;>*)
+END_VAR
+
+
+(*Group:Hardware*)
+
+
+VAR_GLOBAL
+	arrProcInAI0	AT %IB71 :	ANL_ARR_W_1_4;
+	arrProcOutAI0	AT %QB67 :	ANL_ARR_W_1_4;
+	arrProcInAI1	AT %IB79 :	ANL_ARR_W_1_4;
+	arrProcOutAI1	AT %QB75 :	ANL_ARR_W_1_4;
+	arrProcInAI2	AT %IB87 :	ANL_ARR_W_1_4;
+	arrProcOutAI2	AT %QB83 :	ANL_ARR_W_1_4;
+	arrProcInAI3	AT %IB95 :	ANL_ARR_W_1_4;
+	arrProcOutAI3	AT %QB91 :	ANL_ARR_W_1_4;
+	arrProcInAO0	AT %IB103 :	ANL_ARR_W_1_4;
+	arrProcOutAO0	AT %QB99 :	ANL_ARR_W_1_4;
+	arrProcInAO1	AT %IB111 :	ANL_ARR_W_1_4;
+	arrProcOutAO1	AT %QB107 :	ANL_ARR_W_1_4;
+	xBrnQM_ON	AT %IX65.2 :	BOOL;
+	xBrnRemote	AT %IX65.3 :	BOOL;
+	xBrnSafetyCircON	AT %IX65.4 :	BOOL;
+	xBrnRUN	AT %IX65.5 :	BOOL;
+	xBrnFault	AT %IX65.6 :	BOOL;
+	xBrnUnlock	AT %QX64.0 :	BOOL;
+	xBrnCOM	AT %QX64.1 :	BOOL;
+	xExhsrRemote	AT %IX65.7 :	BOOL;
+	xExhsr_FC_RUN	AT %IX64.0 :	BOOL;
+	xExhsrDirectRUN	AT %IX64.1 :	BOOL;
+	xExhsr_FC_OK	AT %IX64.2 :	BOOL;
+	xExhsrTempFault	AT %IX64.3 :	BOOL;
+	xExhsrCOM	AT %QX64.2 :	BOOL;
+	xExhsrDirectLock	AT %QX64.3 :	BOOL;
+	xPmpRemote	AT %IX68.5 :	BOOL;
+	xPmp_FC_RUN	AT %IX68.6 :	BOOL;
+	xPmpDirectRUN	AT %IX68.7 :	BOOL;
+	xPmpTempFault	AT %IX70.0 :	BOOL;
+	xPmpCOM	AT %QX66.2 :	BOOL;
+	xPmpDirectLock	AT %QX66.3 :	BOOL;
+	xVlv_in_QM_ON	AT %IX63.1 :	BOOL;
+	xVlv_in_Remote	AT %IX63.2 :	BOOL;
+	xVlv_in_RUN	AT %IX63.3 :	BOOL;
+	xVlv_in_TorqueSwAlrm	AT %IX63.4 :	BOOL;
+	xVlv_in_Closed	AT %IX63.5 :	BOOL;
+	xVlv_in_Opened	AT %IX63.6 :	BOOL;
+	xVlv_in_COM_OP	AT %QX64.6 :	BOOL;
+	xVlv_in_COM_CL	AT %QX64.7 :	BOOL;
+	xVlv_out_QM_ON	AT %IX63.7 :	BOOL;
+	xVlv_out_Remote	AT %IX68.0 :	BOOL;
+	xVlv_out_RUN	AT %IX68.1 :	BOOL;
+	xVlv_out_TorqueSwAlrm	AT %IX68.2 :	BOOL;
+	xVlv_out_Closed	AT %IX68.3 :	BOOL;
+	xVlv_out_Opened	AT %IX68.4 :	BOOL;
+	xVlv_out_COM_OP	AT %QX66.0 :	BOOL;
+	xVlv_out_COM_CL	AT %QX66.1 :	BOOL;
+	xExhsrGt_QM_ON	AT %IX64.4 :	BOOL;
+	xExhsrGt_Remote	AT %IX64.5 :	BOOL;
+	xExhsrGt_RUN	AT %IX64.6 :	BOOL;
+	xExhsrGt_Closed	AT %IX64.7 :	BOOL;
+	xExhsrGt_Opened	AT %IX63.0 :	BOOL;
+	xExhsrGt_COM_OP	AT %QX64.4 :	BOOL;
+	xExhsrGt_COM_CL	AT %QX64.5 :	BOOL;
+	xUPS_Fault	AT %IX66.1 :	BOOL;
+	xBatDischarging	AT %IX66.2 :	BOOL;
+	xBatCharging	AT %IX66.3 :	BOOL;
+	xTout_hi	AT %IX66.4 :	BOOL;
+	xPout_lo	AT %IX66.5 :	BOOL;
+	xPout_hi	AT %IX66.6 :	BOOL;
+	xPbrng_hi	AT %IX66.7 :	BOOL;
+	xFwtr_lo	AT %IX65.0 :	BOOL;
+	xVltgOK	AT %IX66.0 :	BOOL;
+	xAlarmSound :	BOOL;
+	xAlarmLight :	BOOL;
+	xAlarmSoundOFF :	BOOL;
+	xACK :	BOOL;
+	GasCntPls	AT %IX65.1 :	BOOL;
+END_VAR
+
+
