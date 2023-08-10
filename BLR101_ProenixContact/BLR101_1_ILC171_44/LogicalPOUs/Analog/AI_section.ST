@@ -477,27 +477,5 @@ AI3_Ch4_Diag(udtStatus:=udtStatusAI3,iChannel:=int#4);
 RecPmpFeedback_fb(Snsr_strct:=RecPmpFeedback);
 	RecPmpFeedback:=RecPmpFeedback_fb.Snsr_strct;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 (*@KEY@: END_WORKSHEET *)
 END_PROGRAM
