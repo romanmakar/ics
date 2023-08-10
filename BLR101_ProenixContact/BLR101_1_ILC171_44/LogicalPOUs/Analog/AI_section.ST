@@ -187,16 +187,29 @@ IEC_LANGUAGE: ST
 *)
 	
 	(*AI0 module parametrization*)
-AI0_Ch1_Param(iChannel:=int#1,iMode:=int#1,iFilter:=int#0,rHighLimit:=int_to_real(Boiler.AI[0].ADC_Range),rLowLimit:=0.0,udtPara:=udtParamAI0);
+AI0_Ch1_Param(iChannel:=int#1,iMode:=int#1,iFilter:=int#0,
+	rHighLimit:=int_to_real(Boiler.AI[0].ADC_Range),
+	rLowLimit:=0.0,udtPara:=udtParamAI0);
 	udtParamAI0:=AI0_Ch1_Param.udtPara;
-AI0_Ch2_Param(iChannel:=int#2,iMode:=int#1,iFilter:=int#0,rHighLimit:=int_to_real(Boiler.AI[1].ADC_Range),rLowLimit:=0.0,udtPara:=udtParamAI0);
+
+AI0_Ch2_Param(iChannel:=int#2,iMode:=int#1,iFilter:=int#0,
+	rHighLimit:=int_to_real(Boiler.AI[1].ADC_Range),
+	rLowLimit:=0.0,udtPara:=udtParamAI0);
 	udtParamAI0:=AI0_Ch2_Param.udtPara;
-AI0_Ch3_Param(iChannel:=int#3,iMode:=int#1,iFilter:=int#0,rHighLimit:=int_to_real(Boiler.AI[3].ADC_Range),rLowLimit:=0.0,udtPara:=udtParamAI0);
+
+AI0_Ch3_Param(iChannel:=int#3,iMode:=int#1,iFilter:=int#0,
+	rHighLimit:=int_to_real(Boiler.AI[3].ADC_Range),
+	rLowLimit:=0.0,udtPara:=udtParamAI0);
 	udtParamAI0:=AI0_Ch3_Param.udtPara;
-AI0_Ch4_Param(iChannel:=int#4,iMode:=int#1,iFilter:=int#0,rHighLimit:=int_to_real(Boiler.AI[10].ADC_Range),rLowLimit:=0.0,udtPara:=udtParamAI0);
+
+AI0_Ch4_Param(iChannel:=int#4,iMode:=int#1,iFilter:=int#0,
+	rHighLimit:=int_to_real(Boiler.AI[10].ADC_Range),
+	rLowLimit:=0.0,udtPara:=udtParamAI0);
 	udtParamAI0:=AI0_Ch4_Param.udtPara;
+	
 	(*AI0 module communication*)
-AI0_Com(xActivate:=true,bSelect:=byte#16#0F,xVoltage:=false,udtPara:=udtParamAI0,arrProcIn:=arrProcInAI0);
+AI0_Com(xActivate:=true,bSelect:=byte#16#0F,xVoltage:=false,
+	udtPara:=udtParamAI0,arrProcIn:=arrProcInAI0);
 	xAI0_Ready:=AI0_Com.xReady;
 	xAI0_Err:=AI0_Com.xError;
 	wAI0_Diag:=AI0_Com.wDiagCode;
@@ -210,16 +223,17 @@ AI0_Ch1_Diag(udtStatus:=udtStatusAI0,iChannel:=int#1);
 	Boiler.AI[0].CW.ExtFault:=not AI0_Ch1_Diag.xDataValid;
 	Boiler.AI[0].DiagCode:=AI0_Ch1_Diag.wDiagCode;
 	Boiler.AI[0].PIW:=real_to_int(AI0_Ch1_Diag.rCurrentValue);
+
 T_in_fb(Snsr_strct:=Boiler.AI[0]);
 	Boiler.AI[0]:=T_in_fb.Snsr_strct;
 	T_in_PLS:= T_in_fb.SnsrPLS;
-
 
 (*Boiler outlet water temperature*)
 AI0_Ch2_Diag(udtStatus:=udtStatusAI0,iChannel:=int#2);
 	Boiler.AI[1].CW.ExtFault:=not AI0_Ch2_Diag.xDataValid;
 	Boiler.AI[1].DiagCode:=AI0_Ch2_Diag.wDiagCode;
 	Boiler.AI[1].PIW:=real_to_int(AI0_Ch2_Diag.rCurrentValue);
+
 T_out_fb(Snsr_strct:=Boiler.AI[1]);
 	Boiler.AI[1]:=T_out_fb.Snsr_strct;
 	T_out_PLS:= T_out_fb.SnsrPLS;
@@ -229,6 +243,7 @@ AI0_Ch3_Diag(udtStatus:=udtStatusAI0,iChannel:=int#3);
 	Boiler.AI[3].CW.ExtFault:=not AI0_Ch3_Diag.xDataValid;
 	Boiler.AI[3].DiagCode:=AI0_Ch3_Diag.wDiagCode;
 	Boiler.AI[3].PIW:=real_to_int(AI0_Ch3_Diag.rCurrentValue);
+
 T_smoke_fb(Snsr_strct:=Boiler.AI[3]);
 	Boiler.AI[3]:=T_smoke_fb.Snsr_strct;
 	T_smoke_PLS:= T_smoke_fb.SnsrPLS;
@@ -238,27 +253,36 @@ AI0_Ch4_Diag(udtStatus:=udtStatusAI0,iChannel:=int#4);
 	Boiler.AI[10].CW.ExtFault:=not AI0_Ch4_Diag.xDataValid;
 	Boiler.AI[10].DiagCode:=AI0_Ch4_Diag.wDiagCode;
 	Boiler.AI[10].PIW:=real_to_int(AI0_Ch4_Diag.rCurrentValue);
+
 	Boiler.AI[10].CW.bar_kgf:=true;
 P_in_fb(Snsr_strct:=Boiler.AI[10]);
 	Boiler.AI[10]:=P_in_fb.Snsr_strct;
 	P_in_PLS:= P_in_fb.SnsrPLS;
 
-
-
-
-
 	(*AI1 module parametrization*)
-AI1_Ch1_Param(iChannel:=int#1,iMode:=int#1,iFilter:=int#0,rHighLimit:=int_to_real(Boiler.AI[11].ADC_Range),rLowLimit:=0.0,udtPara:=udtParamAI1);
+AI1_Ch1_Param(iChannel:=int#1,iMode:=int#1,iFilter:=int#0,
+	rHighLimit:=int_to_real(Boiler.AI[11].ADC_Range),
+	rLowLimit:=0.0,udtPara:=udtParamAI1);
 	udtParamAI1:=AI1_Ch1_Param.udtPara;
-AI1_Ch2_Param(iChannel:=int#2,iMode:=int#1,iFilter:=int#0,rHighLimit:=int_to_real(Boiler.Brn1.AI[0].ADC_Range),rLowLimit:=0.0,udtPara:=udtParamAI1);
+
+AI1_Ch2_Param(iChannel:=int#2,iMode:=int#1,iFilter:=int#0,
+	rHighLimit:=int_to_real(Boiler.Brn1.AI[0].ADC_Range),
+	rLowLimit:=0.0,udtPara:=udtParamAI1);
 	udtParamAI1:=AI1_Ch2_Param.udtPara;
-AI1_Ch3_Param(iChannel:=int#3,iMode:=int#1,iFilter:=int#0,rHighLimit:=int_to_real(Boiler.AI[15].ADC_Range),rLowLimit:=0.0,udtPara:=udtParamAI1);
+
+AI1_Ch3_Param(iChannel:=int#3,iMode:=int#1,iFilter:=int#0,
+	rHighLimit:=int_to_real(Boiler.AI[15].ADC_Range),
+	rLowLimit:=0.0,udtPara:=udtParamAI1);
 	udtParamAI1:=AI1_Ch3_Param.udtPara;
-AI1_Ch4_Param(iChannel:=int#4,iMode:=int#1,iFilter:=int#0,rHighLimit:=int_to_real(Boiler.AI[16].ADC_Range),rLowLimit:=0.0,udtPara:=udtParamAI1);
+
+AI1_Ch4_Param(iChannel:=int#4,iMode:=int#1,iFilter:=int#0,
+	rHighLimit:=int_to_real(Boiler.AI[16].ADC_Range),
+	rLowLimit:=0.0,udtPara:=udtParamAI1);
 	udtParamAI1:=AI1_Ch4_Param.udtPara;
 
 	(*AI1 module communication*)
-AI1_Com(xActivate:=true,bSelect:=byte#16#0F,xVoltage:=false,udtPara:=udtParamAI1,arrProcIn:=arrProcInAI1);
+AI1_Com(xActivate:=true,bSelect:=byte#16#0F,xVoltage:=false,
+	udtPara:=udtParamAI1,arrProcIn:=arrProcInAI1);
 	xAI1_Ready:=AI1_Com.xReady;
 	xAI1_Err:=AI1_Com.xError;
 	wAI1_Diag:=AI1_Com.wDiagCode;
@@ -273,6 +297,7 @@ AI1_Ch1_Diag(udtStatus:=udtStatusAI1,iChannel:=int#1);
 	Boiler.AI[11].DiagCode:=AI1_Ch1_Diag.wDiagCode;
 	Boiler.AI[11].PIW:=real_to_int(AI1_Ch1_Diag.rCurrentValue);
 	Boiler.AI[11].CW.bar_kgf:=true;
+
 P_out_fb(Snsr_strct:=Boiler.AI[11]);
 	Boiler.AI[11]:=P_out_fb.Snsr_strct;
 	P_out_PLS:= P_out_fb.SnsrPLS;
@@ -283,6 +308,7 @@ AI1_Ch2_Diag(udtStatus:=udtStatusAI1,iChannel:=int#2);
 	Boiler.Brn1.AI[0].DiagCode:=AI1_Ch2_Diag.wDiagCode;
 	Boiler.Brn1.AI[0].PIW:=real_to_int(AI1_Ch2_Diag.rCurrentValue);
 	Boiler.AI[0].CW.bar_kgf:=true;
+
 P_gas_fb(Snsr_strct:=Boiler.Brn1.AI[0]);
 	Boiler.Brn1.AI[0]:=P_gas_fb.Snsr_strct;
 	P_gas_PLS:= P_gas_fb.SnsrPLS;
@@ -292,6 +318,7 @@ AI1_Ch3_Diag(udtStatus:=udtStatusAI1,iChannel:=int#3);
 	Boiler.AI[15].CW.ExtFault:=not AI1_Ch3_Diag.xDataValid;
 	Boiler.AI[15].DiagCode:=AI1_Ch3_Diag.wDiagCode;
 	Boiler.AI[15].PIW:=real_to_int(AI1_Ch3_Diag.rCurrentValue);
+
 P_internal_fb(Snsr_strct:=Boiler.AI[15]);
 	Boiler.AI[15]:=P_internal_fb.Snsr_strct;
 	P_internal_PLS:= P_internal_fb.SnsrPLS;
@@ -301,26 +328,36 @@ AI1_Ch4_Diag(udtStatus:=udtStatusAI1,iChannel:=int#4);
 	Boiler.AI[16].CW.ExtFault:=not AI1_Ch4_Diag.xDataValid;
 	Boiler.AI[16].DiagCode:=AI1_Ch4_Diag.wDiagCode;
 	Boiler.AI[16].PIW:=real_to_int(AI1_Ch4_Diag.rCurrentValue);
+
 P_exhsr_in_fb(Snsr_strct:=Boiler.AI[16]);
 	Boiler.AI[16]:=P_exhsr_in_fb.Snsr_strct;
 	P_exhsr_in_PLS:= P_exhsr_in_fb.SnsrPLS;
 
 
-
-
-
 	(*AI2 module parametrization*)
-AI2_Ch1_Param(iChannel:=int#1,iMode:=int#1,iFilter:=int#0,rHighLimit:=int_to_real(Boiler.AI[24].ADC_Range),rLowLimit:=0.0,udtPara:=udtParamAI2);
+AI2_Ch1_Param(iChannel:=int#1,iMode:=int#1,iFilter:=int#0,
+	rHighLimit:=int_to_real(Boiler.AI[24].ADC_Range),
+	rLowLimit:=0.0,udtPara:=udtParamAI2);
 	udtParamAI2:=AI2_Ch1_Param.udtPara;
-AI2_Ch2_Param(iChannel:=int#2,iMode:=int#1,iFilter:=int#0,rHighLimit:=int_to_real(Boiler.AI[23].ADC_Range),rLowLimit:=0.0,udtPara:=udtParamAI2);
+
+AI2_Ch2_Param(iChannel:=int#2,iMode:=int#1,iFilter:=int#0,
+	rHighLimit:=int_to_real(Boiler.AI[23].ADC_Range),
+	rLowLimit:=0.0,udtPara:=udtParamAI2);
 	udtParamAI2:=AI2_Ch2_Param.udtPara;
-AI2_Ch3_Param(iChannel:=int#3,iMode:=int#1,iFilter:=int#0,rHighLimit:=int_to_real(Boiler.AI[12].ADC_Range),rLowLimit:=0.0,udtPara:=udtParamAI2);
+
+AI2_Ch3_Param(iChannel:=int#3,iMode:=int#1,iFilter:=int#0,
+	rHighLimit:=int_to_real(Boiler.AI[12].ADC_Range),
+	rLowLimit:=0.0,udtPara:=udtParamAI2);
 	udtParamAI2:=AI2_Ch3_Param.udtPara;
-AI2_Ch4_Param(iChannel:=int#4,iMode:=int#1,iFilter:=int#0,rHighLimit:=int_to_real(Boiler.AI[13].ADC_Range),rLowLimit:=0.0,udtPara:=udtParamAI2);
+
+AI2_Ch4_Param(iChannel:=int#4,iMode:=int#1,iFilter:=int#0,
+	rHighLimit:=int_to_real(Boiler.AI[13].ADC_Range),
+	rLowLimit:=0.0,udtPara:=udtParamAI2);
 	udtParamAI2:=AI2_Ch4_Param.udtPara;
 
 	(*AI2 module communication*)
-AI2_Com(xActivate:=true,bSelect:=byte#16#0E,xVoltage:=false,udtPara:=udtParamAI2,arrProcIn:=arrProcInAI2);
+AI2_Com(xActivate:=true,bSelect:=byte#16#0E,xVoltage:=false,
+	udtPara:=udtParamAI2,arrProcIn:=arrProcInAI2);
 	xAI2_Ready:=AI2_Com.xReady;
 	xAI2_Err:=AI2_Com.xError;
 	wAI2_Diag:=AI2_Com.wDiagCode;
@@ -329,7 +366,6 @@ AI2_Com(xActivate:=true,bSelect:=byte#16#0E,xVoltage:=false,udtPara:=udtParamAI2
 	arrProcOutAI2:=AI2_Com.arrProcOut;
 
 	(*AI2 module diagnostic*)
-
 (*Reserve*)
 AI2_Ch1_Diag(udtStatus:=udtStatusAI2,iChannel:=int#1);
 	Boiler.AI[24].CW.ExtFault:=not AI2_Ch1_Diag.xDataValid;
@@ -341,6 +377,7 @@ AI2_Ch2_Diag(udtStatus:=udtStatusAI2,iChannel:=int#2);
 	Boiler.AI[23].CW.ExtFault:=not AI2_Ch2_Diag.xDataValid;
 	Boiler.AI[23].DiagCode:=AI2_Ch2_Diag.wDiagCode;
 	Boiler.AI[23].PIW:=real_to_int(AI2_Ch2_Diag.rCurrentValue);
+
 F_hc_fb(Snsr_strct:=Boiler.AI[23]);
 	Boiler.AI[23]:=F_hc_fb.Snsr_strct;
 	F_hc_PLS:= F_hc_fb.SnsrPLS;
@@ -351,6 +388,7 @@ AI2_Ch3_Diag(udtStatus:=udtStatusAI2,iChannel:=int#3);
 	Boiler.AI[12].DiagCode:=AI2_Ch3_Diag.wDiagCode;
 	Boiler.AI[12].PIW:=real_to_int(AI2_Ch3_Diag.rCurrentValue);
 	Boiler.AI[12].CW.bar_kgf:=true;
+
 P_pmp_in_fb(Snsr_strct:=Boiler.AI[12]);
 	Boiler.AI[12]:=P_pmp_in_fb.Snsr_strct;
 	P_pmp_in_PLS:= P_pmp_in_fb.SnsrPLS;
@@ -361,26 +399,32 @@ AI2_Ch4_Diag(udtStatus:=udtStatusAI2,iChannel:=int#4);
 	Boiler.AI[13].DiagCode:=AI2_Ch4_Diag.wDiagCode;
 	Boiler.AI[13].PIW:=real_to_int(AI2_Ch4_Diag.rCurrentValue);
 	Boiler.AI[13].CW.bar_kgf:=true;
+
 P_pmp_out_fb(Snsr_strct:=Boiler.AI[13]);
 	Boiler.AI[13]:=P_pmp_out_fb.Snsr_strct;
 	P_pmp_out_PLS:= P_pmp_out_fb.SnsrPLS;
 
 
-
-
-
 	(*AI3 module parametrization*)
-AI3_Ch1_Param(iChannel:=int#1,iMode:=int#1,iFilter:=int#0,rHighLimit:=10000.0,rLowLimit:=0.0,udtPara:=udtParamAI3);
+AI3_Ch1_Param(iChannel:=int#1,iMode:=int#1,iFilter:=int#0,
+	rHighLimit:=10000.0,rLowLimit:=0.0,udtPara:=udtParamAI3);
 	udtParamAI3:=AI3_Ch1_Param.udtPara;
-AI3_Ch2_Param(iChannel:=int#2,iMode:=int#1,iFilter:=int#0,rHighLimit:=10000.0,rLowLimit:=0.0,udtPara:=udtParamAI3);
+
+AI3_Ch2_Param(iChannel:=int#2,iMode:=int#1,iFilter:=int#0,
+	rHighLimit:=10000.0,rLowLimit:=0.0,udtPara:=udtParamAI3);
 	udtParamAI3:=AI3_Ch2_Param.udtPara;
-AI3_Ch3_Param(iChannel:=int#3,iMode:=int#1,iFilter:=int#0,rHighLimit:=10000.0,rLowLimit:=0.0,udtPara:=udtParamAI3);
+
+AI3_Ch3_Param(iChannel:=int#3,iMode:=int#1,iFilter:=int#0,
+	rHighLimit:=10000.0,rLowLimit:=0.0,udtPara:=udtParamAI3);
 	udtParamAI3:=AI3_Ch3_Param.udtPara;
-AI3_Ch4_Param(iChannel:=int#4,iMode:=int#1,iFilter:=int#0,rHighLimit:=10000.0,rLowLimit:=0.0,udtPara:=udtParamAI3);
+
+AI3_Ch4_Param(iChannel:=int#4,iMode:=int#1,iFilter:=int#0,
+	rHighLimit:=10000.0,rLowLimit:=0.0,udtPara:=udtParamAI3);
 	udtParamAI3:=AI3_Ch4_Param.udtPara;
 
 	(*AI3 module communication*)
-AI3_Com(xActivate:=true,bSelect:=byte#16#0F,xVoltage:=false,udtPara:=udtParamAI3,arrProcIn:=arrProcInAI3);
+AI3_Com(xActivate:=true,bSelect:=byte#16#0F,xVoltage:=false,
+	udtPara:=udtParamAI3,arrProcIn:=arrProcInAI3);
 	xAI3_Ready:=AI3_Com.xReady;
 	xAI3_Err:=AI3_Com.xError;
 	wAI3_Diag:=AI3_Com.wDiagCode;
@@ -396,6 +440,7 @@ AI3_Ch1_Diag(udtStatus:=udtStatusAI3,iChannel:=int#1);
 	BrnrFeedback.PIW:=real_to_int(AI3_Ch1_Diag.rCurrentValue);
 	BrnrFeedback.k:= 100.0;
 	BrnrFeedback.ADC_Range:=10000;
+
 BrnrFeedback_fb(Snsr_strct:=BrnrFeedback);
 	BrnrFeedback:=BrnrFeedback_fb.Snsr_strct;
 
@@ -406,6 +451,7 @@ AI3_Ch2_Diag(udtStatus:=udtStatusAI3,iChannel:=int#2);
 	ExhsrFeedback.PIW:=real_to_int(AI3_Ch2_Diag.rCurrentValue);
 	ExhsrFeedback.k:=50.0;
 	ExhsrFeedback.ADC_Range:=10000;
+
 ExhsrFeedback_fb(Snsr_strct:=ExhsrFeedback);
 	ExhsrFeedback:=ExhsrFeedback_fb.Snsr_strct;
 
@@ -416,6 +462,7 @@ AI3_Ch3_Diag(udtStatus:=udtStatusAI3,iChannel:=int#3);
 	ExhsrGatePos.PIW:=real_to_int(AI3_Ch3_Diag.rCurrentValue);
 	ExhsrGatePos.k:= 100.0;
 	ExhsrGatePos.ADC_Range:=10000;
+
 ExhsrGatePos_fb(Snsr_strct:=ExhsrGatePos);
 	ExhsrGatePos:=ExhsrGatePos_fb.Snsr_strct;
 
@@ -426,6 +473,7 @@ AI3_Ch4_Diag(udtStatus:=udtStatusAI3,iChannel:=int#4);
 	RecPmpFeedback.PIW:=real_to_int(AI3_Ch4_Diag.rCurrentValue);
 	RecPmpFeedback.k:=50.0;
 	RecPmpFeedback.ADC_Range:=10000;
+
 RecPmpFeedback_fb(Snsr_strct:=RecPmpFeedback);
 	RecPmpFeedback:=RecPmpFeedback_fb.Snsr_strct;
 

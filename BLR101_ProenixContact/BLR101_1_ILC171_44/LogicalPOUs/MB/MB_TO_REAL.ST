@@ -56,7 +56,12 @@ ValExp:=ReSyBasic_WordToByteV01_2.OUT_LB_High;
 ValMantHigh:=ReSyBasic_WordToByteV01_2.OUT_LB_Low;
 
 		(*Converting BYTEs to REAL*)
-ReSyBasic_IEEEToRealV10_1(IN_LX_DisablePou:=false,IN_LB_ValueMantissaLow:=ValMantLow,IN_LB_ValueMantissaMiddle:=ValMantMid,IN_LB_ValueMantissaHigh:=ValMantHigh,IN_LB_ValueExponent:=ValExp);
+ReSyBasic_IEEEToRealV10_1(IN_LX_DisablePou:=false,
+	IN_LB_ValueMantissaLow:=ValMantLow,
+	IN_LB_ValueMantissaMiddle:=ValMantMid,
+	IN_LB_ValueMantissaHigh:=ValMantHigh,
+	IN_LB_ValueExponent:=ValExp);
+	
 Float:=ReSyBasic_IEEEToRealV10_1.OUT_LR_Value;
 
 (*@KEY@: END_WORKSHEET *)

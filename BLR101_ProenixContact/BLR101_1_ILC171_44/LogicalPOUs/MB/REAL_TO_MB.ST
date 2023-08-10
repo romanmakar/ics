@@ -53,11 +53,17 @@ ValMantHigh:=ReSyBasic_RealToIEEEV10_1.OUT_LB_ValueMantissaHigh;
 ValExp:=ReSyBasic_RealToIEEEV10_1.OUT_LB_ValueExponent;
 
 		(*Converting Low BYTEs to WORD*)
-ReSyBasic_ByteToWordV01_1(IN_LX_DisablePou:=false,IN_LB_ValueHigh:=ValMantMid,IN_LB_ValueLow:=ValMantLow);
+ReSyBasic_ByteToWordV01_1(IN_LX_DisablePou:=false,
+	IN_LB_ValueHigh:=ValMantMid,
+	IN_LB_ValueLow:=ValMantLow);
+
 LoWord:=ReSyBasic_ByteToWordV01_1.OUT_LW_Value;
 
 		(*Converting High BYTEs to WORD*)
-ReSyBasic_ByteToWordV01_2(IN_LX_DisablePou:=false,IN_LB_ValueHigh:=ValExp,IN_LB_ValueLow:=ValMantHigh);
+ReSyBasic_ByteToWordV01_2(IN_LX_DisablePou:=false,
+	IN_LB_ValueHigh:=ValExp,
+	IN_LB_ValueLow:=ValMantHigh);
+	
 HiWord:=ReSyBasic_ByteToWordV01_2.OUT_LW_Value;
 
 (*@KEY@: END_WORKSHEET *)

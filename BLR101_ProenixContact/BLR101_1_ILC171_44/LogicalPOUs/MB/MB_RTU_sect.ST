@@ -125,7 +125,11 @@ end_if;
 
 
 	(*MB RTU Master FB initialization*)
-MB_IL_UNI31_Master(xActivate:=xMB_RTU_Master_ON,bSelectMode:=byte#16#1,diBaudrate:=dint#19200,wDataWidth:=word#16#4,xDTR_Control:=false,xDTR:=false,tTimeout:=t#1s,xReset:=false,udtMBData:=udtMB_Data,arrInputAddress:=arrIN_Address,arrOutputAddress:=arrOUT_Address);
+MB_IL_UNI31_Master(xActivate:=xMB_RTU_Master_ON,bSelectMode:=byte#16#1,
+	diBaudrate:=dint#19200,wDataWidth:=word#16#4,xDTR_Control:=false,
+	xDTR:=false,tTimeout:=t#1s,xReset:=false,udtMBData:=udtMB_Data,
+	arrInputAddress:=arrIN_Address,arrOutputAddress:=arrOUT_Address);
+
 xMB_RTU_Master_Act:=MB_IL_UNI31_Master.xActive;
 xMB_RTU_Master_Busy:=MB_IL_UNI31_Master.xBusy;
 xMB_RTU_Master_Ready:=MB_IL_UNI31_Master.xReady;
@@ -149,11 +153,11 @@ case i of
 		iSlvRegCount:= 20;
 
 	1:	uiSlvAddr:= uint#2;
-		uiSlvReg:= uint#16029;	(*reg.16029 Status Word*)
+		uiSlvReg:= uint#16029;													(*reg.16029 Status Word*)
 		iSlvRegCount:= 2;
 
 	2:	uiSlvAddr:= uint#3;
-		uiSlvReg:= uint#16029;	(*reg.16029 Status Word*)
+		uiSlvReg:= uint#16029;													(*reg.16029 Status Word*)
 		iSlvRegCount:= 2;
 
 	3:	uiSlvAddr:= uint#4;
@@ -181,11 +185,11 @@ case i of
 		iSlvRegCount:= 20;
 
 	9:	uiSlvAddr:= uint#2;
-		uiSlvReg:= uint#16129;	(*reg.16129 Frequency Hz*)
+		uiSlvReg:= uint#16129;													(*reg.16129 Frequency Hz*)
 		iSlvRegCount:= 2;
 
 	10:	uiSlvAddr:= uint#3;
-		uiSlvReg:= uint#16129;	(*reg.16129 Frequency Hz*)
+		uiSlvReg:= uint#16129;													(*reg.16129 Frequency Hz*)
 		iSlvRegCount:= 2;
 
 	11:	uiSlvAddr:= uint#4;
@@ -193,49 +197,49 @@ case i of
 		iSlvRegCount:= 2;
 
 	12:	uiSlvAddr:= uint#2;
-		uiSlvReg:= uint#16139;	(*reg.16139 Motor Current A*)
+		uiSlvReg:= uint#16139;													(*reg.16139 Motor Current A*)
 		iSlvRegCount:= 2;
 
 	13:	uiSlvAddr:= uint#3;
-		uiSlvReg:= uint#16139;	(*reg.16139 Motor Current A*)
+		uiSlvReg:= uint#16139;													(*reg.16139 Motor Current A*)
 		iSlvRegCount:= 2;
 
 	14:	uiSlvAddr:= uint#2;
-		uiSlvReg:= uint#16899;	(*reg.16899 Alarm Word*)
+		uiSlvReg:= uint#16899;													(*reg.16899 Alarm Word*)
 		iSlvRegCount:= 2;
 
 	15:	uiSlvAddr:= uint#3;
-		uiSlvReg:= uint#16899;	(*reg.16899 Alarm Word*)
+		uiSlvReg:= uint#16899;													(*reg.16899 Alarm Word*)
 		iSlvRegCount:= 2;
 
 	16:	uiSlvAddr:= uint#2;
-		uiSlvReg:= uint#16919;	(*reg.16919 Warning Word*)
+		uiSlvReg:= uint#16919;													(*reg.16919 Warning Word*)
 		iSlvRegCount:= 2;
 
 	17:	uiSlvAddr:= uint#3;
-		uiSlvReg:= uint#16919;	(*reg.16919 Warning Word*)
+		uiSlvReg:= uint#16919;													(*reg.16919 Warning Word*)
 		iSlvRegCount:= 2;
 
 	18:	uiSlvAddr:= uint#2;
-		uiSlvReg:= uint#15009;	(*reg.15009 Running hours h*)
+		uiSlvReg:= uint#15009;													(*reg.15009 Running hours h*)
 		iSlvRegCount:= 2;
 
 	19:	uiSlvAddr:= uint#3;
-		uiSlvReg:= uint#15009;	(*reg.15009 Running hours h*)
+		uiSlvReg:= uint#15009;													(*reg.15009 Running hours h*)
 		iSlvRegCount:= 2;
 
 	20:	uiSlvAddr:= uint#2;
-		uiSlvReg:= uint#15019;	(*reg.15019 kWh Counter*)
+		uiSlvReg:= uint#15019;													(*reg.15019 kWh Counter*)
 		iSlvRegCount:= 2;
 
 	21:	uiSlvAddr:= uint#3;
-		uiSlvReg:= uint#15019;	(*reg.15019 kWh Counter*)
+		uiSlvReg:= uint#15019;													(*reg.15019 kWh Counter*)
 		iSlvRegCount:= 2;
 end_case;
 
 
 
-(*			arrRegAddr[0]:= uint#0;
+			arrRegAddr[0]:= uint#0;
 			arrRegCount[0]:= 20;
 
 			arrRegAddr[1]:= uint#21;
@@ -264,7 +268,11 @@ R_TRIG_1(CLK:=xMB_RTU_Master_ON);
 R_TRIG_2(CLK:= (j = 4));
 
 	(*Burning Controller Set Point writing*)
-MB_RTU_FC6(xActivate:=xMB_RTU_Master_Act,xSendRequest:=R_TRIG_1.Q or R_TRIG_2.Q,xEnablePoll:=false,tPollInterval:=t#1s,uiSlaveAddress:=uint#1,uiStartAddress:=uint#45,wValue:=real_to_word(BrnrSP * 10.0),udtMbData:=udtMB_Data);
+MB_RTU_FC6(xActivate:=xMB_RTU_Master_Act,xSendRequest:=R_TRIG_1.Q or R_TRIG_2.Q,
+	xEnablePoll:=false,tPollInterval:=t#1s,uiSlaveAddress:=uint#1,
+	uiStartAddress:=uint#45,wValue:=real_to_word(BrnrSP * 10.0),
+	udtMbData:=udtMB_Data);
+
 xFC6_Act:=MB_RTU_FC6.xActive;
 xFC6_Busy:=MB_RTU_FC6.xBusy;
 xFC6_Done:=MB_RTU_FC6.xDone;
@@ -276,7 +284,15 @@ udtMB_Data:=MB_RTU_FC6.udtMbData;
 F_TRIG_2(CLK:=(MB_RTU_FC6.xDone or MB_RTU_FC6.xError));
 
 	(*Burning Controller parameters reading*)
-MB_RTU_FC3(xActivate:=xMB_RTU_Master_Act,xSendRequest:=(F_TRIG_2.Q or (F_TRIG_3.Q and (j <> 4))),xEnablePoll:=false,tPollInterval:=t#50ms,uiSlaveAddress:=uiSlvAddr,uiStartAddress:=uiSlvReg,iDataCount:=iSlvRegCount,arrReadData:=arrSlvReadData[i],udtMbData:=udtMB_Data);
+MB_RTU_FC3(xActivate:=xMB_RTU_Master_Act,
+	xSendRequest:=(F_TRIG_2.Q or (F_TRIG_3.Q and (j <> 4))),
+	xEnablePoll:=false,tPollInterval:=t#50ms,
+	uiSlaveAddress:=uiSlvAddr,
+	uiStartAddress:=uiSlvReg,
+	iDataCount:=iSlvRegCount,
+	arrReadData:=arrSlvReadData[i],
+	udtMbData:=udtMB_Data);
+	
 xFC3_Act:=MB_RTU_FC3.xActive;
 xFC3_Busy:=MB_RTU_FC3.xBusy;
 xFC3_Done:=MB_RTU_FC3.xDone;

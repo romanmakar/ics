@@ -3,7 +3,7 @@ TYPE: DATA_TYPE
 LOCALE: 0
 *)
 TYPE
-	CycleCW	:												(*Cycle Control Word*)
+	CycleCW	:																	(*Cycle Control Word*)
 	STRUCT
 		AuxON	     		:	bool;
 		Start   			:	bool;
@@ -25,7 +25,7 @@ TYPE
 END_TYPE
 
 TYPE
-	CycleSW	:												(*Cycle Status Word*)
+	CycleSW	:																	(*Cycle Status Word*)
 	STRUCT
 		ALARM 				:	bool;
 		ON					:	bool;
@@ -47,7 +47,7 @@ TYPE
 END_TYPE
 
 TYPE
-	Cycle	:												(*Cycle Words*)
+	Cycle	:																	(*Cycle Words*)
 	STRUCT
 		CW	 				:	CycleCW;
 		SW					:	CycleSW;
@@ -55,7 +55,7 @@ TYPE
 END_TYPE
 
 TYPE
-	Warn:													(*Boiler Warning Word*)
+	Warn:																		(*Boiler Warning Word*)
 	STRUCT
 		InputVoltage		: 	bool;
 		UPS					: 	bool;
@@ -78,7 +78,7 @@ END_TYPE
 
 
 TYPE 
-	Snsr_CW:												(*Sensor Control Word*)
+	Snsr_CW:																	(*Sensor Control Word*)
 	STRUCT
 		FltrEn				:	bool;
 		LimEn				:	bool;
@@ -100,7 +100,7 @@ TYPE
 END_TYPE
 
 TYPE 
-	Snsr_SW:												(*Sensor Status Word*)
+	Snsr_SW:																	(*Sensor Status Word*)
 	STRUCT
 		Fault				: 	bool;
 		HH_alarm			: 	bool;
@@ -122,7 +122,7 @@ TYPE
 END_TYPE		
 
 TYPE 
-	Snsr_PLS:												(*Sensor Pulse Status*)
+	Snsr_PLS:																	(*Sensor Pulse Status*)
 	STRUCT
 		Fault_PLS			: 	bool;
 		HH_PLS				: 	bool;
@@ -145,7 +145,7 @@ END_TYPE
 
 		
 TYPE 
-	Snsr:													(*Sensor Structure*)
+	Snsr:																		(*Sensor Structure*)
 	STRUCT
 		CW					: 	Snsr_CW;
 		SW					: 	Snsr_SW;
@@ -176,7 +176,7 @@ END_TYPE
 	
 
 TYPE
-	Mot_CW:													(*Motor Control Word*)
+	Mot_CW:																		(*Motor Control Word*)
 	STRUCT
 		Enable				:	bool;
 		AuxON				:	bool;
@@ -198,7 +198,7 @@ TYPE
 END_TYPE
 
 TYPE
-	Mot_SW:													(*Motor Status Word*)
+	Mot_SW:																		(*Motor Status Word*)
 	STRUCT
 		Rem					: 	bool;
 		Auto				: 	bool;
@@ -220,7 +220,7 @@ TYPE
 END_TYPE
 
 TYPE 
-	Mot:													(*Motor Structure*)
+	Mot:																		(*Motor Structure*)
 	STRUCT
 		CW					: 	Mot_CW;
 		SW					: 	Mot_SW;
@@ -245,7 +245,7 @@ TYPE
 END_TYPE
 
 TYPE
-	Vlv_CW:													(*Valve Control Word*)
+	Vlv_CW:																		(*Valve Control Word*)
 	STRUCT
 		Enable				: 	bool;
 		AuxON				:	bool;
@@ -267,7 +267,7 @@ TYPE
 END_TYPE
 
 TYPE
-	Vlv_SW:													(*Valve Status Word*)
+	Vlv_SW:																		(*Valve Status Word*)
 	STRUCT
 		Rem					: 	bool;
 		Auto				: 	bool;
@@ -289,7 +289,7 @@ TYPE
 END_TYPE
 
 TYPE 
-	Vlv:													(*Valve Structure*)
+	Vlv:																		(*Valve Structure*)
 	STRUCT
 		CW					: 	Vlv_CW;
 		SW					: 	Vlv_SW;
@@ -305,7 +305,7 @@ TYPE
 END_TYPE
 
 TYPE 
-	Rgltr_CW:													(*Regulator Control Word*)
+	Rgltr_CW:																	(*Regulator Control Word*)
 	STRUCT
 		En					: 	bool;
 		ManMode				: 	bool;
@@ -327,7 +327,7 @@ TYPE
 END_TYPE
 
 TYPE 
-	Rgltr_SW:													(*Regulator Status Word*)
+	Rgltr_SW:																	(*Regulator Status Word*)
 	STRUCT
 		Error				: 	bool;
 		LH					: 	bool;
@@ -349,7 +349,7 @@ TYPE
 END_TYPE		
 		
 TYPE 
-	Rgltr:													(*Regulator Structure*)
+	Rgltr:																		(*Regulator Structure*)
 	STRUCT
 		CW					: 	Rgltr_CW;
 		SW					: 	Rgltr_SW;
@@ -372,7 +372,7 @@ TYPE
 END_TYPE
 
 TYPE
-	Brnr_CW:													(*Burner Control Word*)
+	Brnr_CW:																	(*Burner Control Word*)
 	STRUCT
 		Enable				: 	bool;
 		AuxON				:	bool;
@@ -394,7 +394,7 @@ TYPE
 END_TYPE
 
 TYPE
-	Brnr_SW:													(*Burner Status Word*)
+	Brnr_SW:																	(*Burner Status Word*)
 	STRUCT
 		Rem					: 	bool;
 		Auto				: 	bool;
@@ -476,7 +476,7 @@ END_TYPE*)
 TYPE 
 		WD: ARRAY [0..2] OF WORD;
 		AD: ARRAY [0..2] OF WORD;
-	Brnr_Sys:												(*Burner System Parameters Structure*)
+	Brnr_Sys:																	(*Burner System Parameters Structure*)
 	STRUCT
 		MinSP				: 	real;
 		MaxSP				: 	real;
@@ -526,7 +526,7 @@ TYPE
 END_TYPE
 
 	TYPE
-	Brnr :													(*Burner Structure*)
+	Brnr :																		(*Burner Structure*)
 	STRUCT
 		CW					: 	Brnr_CW;
 		SW					: 	Brnr_SW;

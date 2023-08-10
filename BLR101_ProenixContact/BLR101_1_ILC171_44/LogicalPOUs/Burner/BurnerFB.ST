@@ -49,7 +49,9 @@ NAME: BurnerFB
 IEC_LANGUAGE: ST
 *)
 	(*Alarm Feedback processing*)
-TON_Overtime(IN:=Brn_strct.CW.Enable and ((Brn_strct.SW.COM and not Brn_strct.SW.RUN) or (not Brn_strct.SW.COM and Brn_strct.SW.RUN)),PT:=SetOvertime);
+TON_Overtime(IN:=Brn_strct.CW.Enable and 
+	((Brn_strct.SW.COM and not Brn_strct.SW.RUN) or
+	(not Brn_strct.SW.COM and Brn_strct.SW.RUN)),PT:=SetOvertime);
 
 if TON_Overtime.Q then
 	AlarmFeedback:=true;
@@ -77,8 +79,11 @@ end_if;
 
 
 
-Brn_strct.SW.ManOK:= not Brn_strct.SW.AlarmAccum and Brn_strct.CW.AuxON and Brn_strct.CW.Enable and not Brn_strct.SW.Auto;
-Brn_strct.SW.AutoOK:= not Brn_strct.SW.AlarmAccum and Brn_strct.CW.AuxON and Brn_strct.CW.Enable and Brn_strct.SW.Auto and Cycle.SW.Running;
+Brn_strct.SW.ManOK:= not Brn_strct.SW.AlarmAccum and Brn_strct.CW.AuxON and
+	Brn_strct.CW.Enable and not Brn_strct.SW.Auto;
+
+Brn_strct.SW.AutoOK:= not Brn_strct.SW.AlarmAccum and Brn_strct.CW.AuxON and
+	Brn_strct.CW.Enable and Brn_strct.SW.Auto and Cycle.SW.Running;
 
 
 	(*Manual mode activation*)
@@ -90,10 +95,12 @@ if Brn_strct.CW.ManStop or not Brn_strct.SW.ManOK then
 end_if;
 
 	(*Auto mode activation*)
-RunAuto:= (Cycle.CW.PulseStart or RunAuto) and Brn_strct.SW.AutoOK and Brn_strct.SW.Auto;
+RunAuto:= (Cycle.CW.PulseStart or RunAuto) and Brn_strct.SW.AutoOK and
+	Brn_strct.SW.Auto;
 
 	(*Set command for start*)
-COM:=((RunManual and Brn_strct.SW.ManOK) or (RunAuto and Brn_strct.SW.AutoOK and Brn_strct.CW.AutoON));
+COM:=((RunManual and Brn_strct.SW.ManOK) or (RunAuto and Brn_strct.SW.AutoOK and
+	Brn_strct.CW.AutoON));
 
 Brn_strct.SW.COM:=COM and not Brn_strct.CW.SimEn;
 
@@ -130,13 +137,13 @@ end_if;
 
 
 	(*Status processing*)
-if Brn_strct.SW.AlarmAccum then											(*Alarm*)
+if Brn_strct.SW.AlarmAccum then													(*Alarm*)
 	Brn_strct.Sys.Status:=word#2;
-elsif not Brn_strct.CW.ExtraEn then										(*Blocking*)
+elsif not Brn_strct.CW.ExtraEn then												(*Blocking*)
 	Brn_strct.Sys.Status:=word#4;
-elsif Brn_strct.SW.COM then												(*Working*)
+elsif Brn_strct.SW.COM then														(*Working*)
 	Brn_strct.Sys.Status:=word#1;
-else																	(*Stoped*)
+else																			(*Stoped*)
 	Brn_strct.Sys.Status:=word#0;
 end_if;
 

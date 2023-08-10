@@ -96,7 +96,18 @@ Boiler.Brn1.Sys.ErrClass:= arrSlvReadData[4][28];
 
 
 	(*Burner PID*)
-BrnPID(IN_xEnable:=Boiler.Brn1.Reg[0].CW.En,IN_tCycleTime:=t#500ms,IN_rSetPoint:=Boiler.Brn1.Reg[0].SP,IN_rActValue:=Boiler.AI[1].RealValue,IN_rDeadBand:=Boiler.Brn1.Reg[0].DeadBand,IN_rYmax:=(Boiler.Brn1.Sys.MaxSP * 10.0),IN_rYmin:=(Boiler.Brn1.Sys.MinSP * 10.0),IN_rYoff:=Boiler.Brn1.Reg[0].ManVal,IN_rKR:=Boiler.Brn1.Reg[0].Kp,IN_rTN:=Boiler.Brn1.Reg[0].Tn,IN_rTV:=Boiler.Brn1.Reg[0].Tv);
+BrnPID(IN_xEnable:=Boiler.Brn1.Reg[0].CW.En,
+	IN_tCycleTime:=t#500ms,
+	IN_rSetPoint:=Boiler.Brn1.Reg[0].SP,
+	IN_rActValue:=Boiler.AI[1].RealValue,
+	IN_rDeadBand:=Boiler.Brn1.Reg[0].DeadBand,
+	IN_rYmax:=(Boiler.Brn1.Sys.MaxSP * 10.0),
+	IN_rYmin:=(Boiler.Brn1.Sys.MinSP * 10.0),
+	IN_rYoff:=Boiler.Brn1.Reg[0].ManVal,
+	IN_rKR:=Boiler.Brn1.Reg[0].Kp,
+	IN_rTN:=Boiler.Brn1.Reg[0].Tn,
+	IN_rTV:=Boiler.Brn1.Reg[0].Tv);
+
 Boiler.Brn1.Reg[0].Y:=BrnPID.OUT_rYout;
 rBrnPidDeviation:=BrnPID.OUT_rControlDeviation;
 

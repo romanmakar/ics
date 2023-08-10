@@ -142,23 +142,46 @@ Boiler.M[0].FC_WarnWord:=DW_TO_DWORD(arrSlvReadData[16][2],arrSlvReadData[16][1]
 
 
 
-ExhsrPID(REMOTE:=Boiler.Reg[1].CW.En,AUTO:= not Boiler.Reg[1].CW.ManMode,DIRECTN:=false,INTLCK:=false,Tscan:=500.0,Yman:=Boiler.Reg[1].ManVal,SPR:=abs(Boiler.Reg[1].SP),SPL:=0.0,X:=abs(Boiler.AI[16].RealValue),KP:=Boiler.Reg[1].Kp,TI:=Boiler.Reg[1].Tn,TD:=Boiler.Reg[1].Tv,HIGH:=(Boiler.M[0].MaxFreq * 10.0),LOW:=(Boiler.M[0].MinFreq * 10.0),INTLCKV:=0.0);
+ExhsrPID(REMOTE:=Boiler.Reg[1].CW.En,
+	AUTO:= not Boiler.Reg[1].CW.ManMode,
+	DIRECTN:=false,
+	INTLCK:=false,
+	Tscan:=500.0,
+	Yman:=Boiler.Reg[1].ManVal,
+	SPR:=abs(Boiler.Reg[1].SP),
+	SPL:=0.0,
+	X:=abs(Boiler.AI[16].RealValue),
+	KP:=Boiler.Reg[1].Kp,
+	TI:=Boiler.Reg[1].Tn,
+	TD:=Boiler.Reg[1].Tv,
+	HIGH:=(Boiler.M[0].MaxFreq * 10.0),
+	LOW:=(Boiler.M[0].MinFreq * 10.0),
+	INTLCKV:=0.0);
+
 Boiler.Reg[1].Y:=ExhsrPID.Yout;
 
-(*
-Exhauser_PID(IN_xEnable:=Boiler.Reg[1].CW.En,IN_tCycleTime:=t#500ms,IN_rSetPoint:= abs(Boiler.Reg[1].SP),IN_rActValue:= abs(Boiler.AI[16].RealValue),IN_rDeadBand:=Boiler.Reg[1].DeadBand,IN_rYmax:=(Boiler.M[0].MaxFreq * 10.0),IN_rYmin:=(Boiler.M[0].MinFreq * 10.0),IN_rYoff:=Boiler.Reg[1].ManVal,IN_rKR:=Boiler.Reg[1].Kp,IN_rTN:=Boiler.Reg[1].Tn,IN_rTV:=Boiler.Reg[1].Tv);
+
+Exhauser_PID(IN_xEnable:=Boiler.Reg[1].CW.En,
+	IN_tCycleTime:=t#500ms,
+	IN_rSetPoint:= abs(Boiler.Reg[1].SP),
+	IN_rActValue:= abs(Boiler.AI[16].RealValue),
+	IN_rDeadBand:=Boiler.Reg[1].DeadBand,
+	IN_rYmax:=(Boiler.M[0].MaxFreq * 10.0),
+	IN_rYmin:=(Boiler.M[0].MinFreq * 10.0),
+	IN_rYoff:=Boiler.Reg[1].ManVal,
+	IN_rKR:=Boiler.Reg[1].Kp,
+	IN_rTN:=Boiler.Reg[1].Tn,
+	IN_rTV:=Boiler.Reg[1].Tv);
+
 Boiler.Reg[1].Y:=Exhauser_PID.OUT_rYout;
 rExhsrPidDeviation:=Exhauser_PID.OUT_rControlDeviation;
-*)
+
 
 if Boiler.M[0].SW.Auto then
 	ExhsrSP:= Boiler.M[0].AutoFreq;
 else
 	ExhsrSP:= Boiler.M[0].ManFreq;
 end_if;
-
-
-
 
 
 	(*Recirculation Pump Motor DI*)
@@ -182,7 +205,8 @@ xPmpDirectLock:= Boiler.M[1].CW.Enable;
 
 	(*Recirculation Pump FC parameters*)
 
-Boiler.M[1].ActFreq:= RecPmpFeedback.RealValue; (*(word_to_real(arrSlvReadData[10][1])) / 10.0;*)
+Boiler.M[1].ActFreq:= RecPmpFeedback.RealValue; 
+(*(word_to_real(arrSlvReadData[10][1])) / 10.0;*)
 
 FC2_Current:=DW_TO_DWORD(arrSlvReadData[13][2],arrSlvReadData[13][1]);
 Boiler.M[1].Current:=dword_to_real(FC2_Current) / 100.0;
@@ -196,14 +220,40 @@ Boiler.M[1].FC_WarnWord:=DW_TO_DWORD(arrSlvReadData[17][2],arrSlvReadData[17][1]
 Boiler.Reg[2].ActVal:= Boiler.AI[13].RealValue - Boiler.AI[12].RealValue;
 	(*Pump PID*)
 
-PmpPID(REMOTE:=Boiler.Reg[2].CW.En,AUTO:= true,DIRECTN:=false,INTLCK:=false,Tscan:=100.0,Yman:=Boiler.Reg[2].ManVal,SPR:=Boiler.Reg[2].SP,SPL:=0.0,X:=Boiler.Reg[2].ActVal,KP:=Boiler.Reg[2].Kp,TI:=Boiler.Reg[2].Tn,TD:=Boiler.Reg[2].Tv,HIGH:=(Boiler.M[1].MaxFreq * 10.0),LOW:=(Boiler.M[1].MinFreq * 10.0),INTLCKV:=0.0);
+PmpPID(REMOTE:=Boiler.Reg[2].CW.En,
+	AUTO:= true,
+	DIRECTN:=false,
+	INTLCK:=false,
+	Tscan:=100.0,
+	Yman:=Boiler.Reg[2].ManVal,
+	SPR:=Boiler.Reg[2].SP,
+	SPL:=0.0,
+	X:=Boiler.Reg[2].ActVal,
+	KP:=Boiler.Reg[2].Kp,
+	TI:=Boiler.Reg[2].Tn,
+	TD:=Boiler.Reg[2].Tv,
+	HIGH:=(Boiler.M[1].MaxFreq * 10.0),
+	LOW:=(Boiler.M[1].MinFreq * 10.0),
+	INTLCKV:=0.0);
+
 Boiler.Reg[2].Y:=PmpPID.Yout;
 
-(*
-Pump_PID(IN_xEnable:=Boiler.Reg[2].CW.En, IN_tCycleTime:=t#200ms, IN_rSetPoint:=Boiler.Reg[2].SP, IN_rActValue:= Boiler.AI[16].RealValue, IN_rDeadBand:=Boiler.Reg[2].DeadBand, IN_rYmax:=(Boiler.M[0].MaxFreq * 10.0), IN_rYmin:=(Boiler.M[1].MinFreq * 10.0), IN_rYoff:=Boiler.Reg[2].ManVal, IN_rKR:=Boiler.Reg[2].Kp, IN_rTN:=Boiler.Reg[2].Tn, IN_rTV:=Boiler.Reg[2].Tv);
+
+Pump_PID(IN_xEnable:=Boiler.Reg[2].CW.En, 
+	IN_tCycleTime:=t#200ms, 
+	IN_rSetPoint:=Boiler.Reg[2].SP,
+	IN_rActValue:= Boiler.AI[16].RealValue,
+	IN_rDeadBand:=Boiler.Reg[2].DeadBand,
+	IN_rYmax:=(Boiler.M[0].MaxFreq * 10.0),
+	IN_rYmin:=(Boiler.M[1].MinFreq * 10.0),
+	IN_rYoff:=Boiler.Reg[2].ManVal,
+	IN_rKR:=Boiler.Reg[2].Kp,
+	IN_rTN:=Boiler.Reg[2].Tn,
+	IN_rTV:=Boiler.Reg[2].Tv);
+
 Boiler.Reg[2].Y:=Pump_PID.OUT_rYout;
 rPumpPidDeviation:=Pump_PID.OUT_rControlDeviation;
-*)
+
 
 if Boiler.M[1].SW.Auto then
 	RecPmpSP:= (Boiler.Reg[2].Y / 10.0);

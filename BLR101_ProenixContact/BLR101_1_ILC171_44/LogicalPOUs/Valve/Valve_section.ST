@@ -130,11 +130,19 @@ xExhsrGt_COM_CL:= Boiler.V[3].SW.COM_Close;
 Boiler.V[3].ActPos:=ExhsrGatePos.RealValue;
 
 
-	(*Exhsr Gate Valve PID
-ExhsrGatePID(IN_xActivate:=Boiler.Reg[0].CW.En,IN_tCycleTime:=t#3s,IN_rSetPoint:=Boiler.Reg[0].SP,IN_rActValue:=Boiler.AI[15].RealValue,IN_rDeadBand:=Boiler.Reg[2].DeadBand,IN_rKR:=Boiler.Reg[0].Kp,IN_rTN:=Boiler.Reg[0].Tn,IN_rTV:=Boiler.Reg[0].Tv,IN_tRunningTime:=t#5s);
+	(*Exhsr Gate Valve PID*)
+ExhsrGatePID(IN_xActivate:=Boiler.Reg[0].CW.En,
+	IN_tCycleTime:=t#3s,
+	IN_rSetPoint:=Boiler.Reg[0].SP,
+	IN_rActValue:=Boiler.AI[15].RealValue,
+	IN_rDeadBand:=Boiler.Reg[2].DeadBand,
+	IN_rKR:=Boiler.Reg[0].Kp,
+	IN_rTN:=Boiler.Reg[0].Tn,
+	IN_rTV:=Boiler.Reg[0].Tv,
+	IN_tRunningTime:=t#5s);
+	
 Boiler.V[3].CW.AutoOpen:=ExhsrGatePID.OUT_xUp;
-Boiler.V[3].CW.AutoClose:=ExhsrGatePID.OUT_xDown;*)
-
+Boiler.V[3].CW.AutoClose:=ExhsrGatePID.OUT_xDown;
 
 (*@KEY@: END_WORKSHEET *)
 END_PROGRAM

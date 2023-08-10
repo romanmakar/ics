@@ -53,7 +53,9 @@ NAME: MotorFB
 IEC_LANGUAGE: ST
 *)
 	(*Alarm Feedback processing*)
-TON_Overtime(IN:=Mot_strct.CW.Enable and (Mot_strct.SW.COM and not Mot_strct.SW.RUN) or (not Mot_strct.SW.COM and Mot_strct.SW.RUN),PT:=SetOvertime);
+TON_Overtime(IN:=Mot_strct.CW.Enable and
+	(Mot_strct.SW.COM and not Mot_strct.SW.RUN) or
+	(not Mot_strct.SW.COM and Mot_strct.SW.RUN),PT:=SetOvertime);
 
 if TON_Overtime.Q then
 	AlarmFeedback:=true;
@@ -82,9 +84,11 @@ elsif Mot_strct.CW.DisableAuto then
 end_if;
 
 
+Mot_strct.SW.ManOK:= not Mot_strct.SW.AlarmAccum and Mot_strct.CW.AuxON and
+	Mot_strct.CW.Enable and not Mot_strct.SW.Auto;
 
-Mot_strct.SW.ManOK:= not Mot_strct.SW.AlarmAccum and Mot_strct.CW.AuxON and Mot_strct.CW.Enable and not Mot_strct.SW.Auto;
-Mot_strct.SW.AutoOK:= not Mot_strct.SW.AlarmAccum and Mot_strct.CW.AuxON and Mot_strct.CW.Enable and Mot_strct.SW.Auto and Cycle.SW.Running;
+Mot_strct.SW.AutoOK:= not Mot_strct.SW.AlarmAccum and Mot_strct.CW.AuxON and
+	Mot_strct.CW.Enable and Mot_strct.SW.Auto and Cycle.SW.Running;
 
 
 	(*Manual mode activation*)
@@ -96,10 +100,12 @@ if Mot_strct.CW.ManStop or not Mot_strct.SW.ManOK then
 end_if;
 
 	(*Auto mode activation*)
-RunAuto:= (Cycle.CW.PulseStart or RunAuto) and Mot_strct.SW.AutoOK and Mot_strct.SW.Auto;
+RunAuto:= (Cycle.CW.PulseStart or RunAuto) and Mot_strct.SW.AutoOK and
+	Mot_strct.SW.Auto;
 
 	(*Set command for start*)
-COM:=((RunManual and Mot_strct.SW.ManOK) or (RunAuto and Mot_strct.SW.AutoOK and Mot_strct.CW.AutoON));
+COM:=((RunManual and Mot_strct.SW.ManOK) or (RunAuto and Mot_strct.SW.AutoOK and
+	Mot_strct.CW.AutoON));
 
 Mot_strct.SW.COM:=COM and not Mot_strct.CW.SimEn;
 
@@ -143,13 +149,13 @@ else
 end_if;
 
 	(*Status processing*)
-if Mot_strct.SW.AlarmAccum then											(*Alarm*)
+if Mot_strct.SW.AlarmAccum then													(*Alarm*)
 	Mot_strct.Status:=word#2;
-elsif not Mot_strct.CW.ExtraEn then										(*Blocking*)
+elsif not Mot_strct.CW.ExtraEn then												(*Blocking*)
 	Mot_strct.Status:=word#4;
-elsif Mot_strct.SW.COM then												(*Working*)
+elsif Mot_strct.SW.COM then														(*Working*)
 	Mot_strct.Status:=word#1;
-else																	(*Stoped*)
+else																			(*Stoped*)
 	Mot_strct.Status:=word#0;
 end_if;
 

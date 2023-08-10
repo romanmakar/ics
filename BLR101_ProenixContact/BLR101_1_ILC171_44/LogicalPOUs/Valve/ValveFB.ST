@@ -52,8 +52,12 @@ NAME: ValveFB
 IEC_LANGUAGE: ST
 *)
 	(*Alarm processing*)
-Fb_Alrm_Tmr(IN:=Vlv_strct.CW.Enable and (COM_Close or COM_Open) and not Vlv_strct.SW.RUN, PT:=t#3s);
-NotMove_Alrm_Tmr(IN:=Vlv_strct.CW.Enable and ((COM_Close and not Vlv_strct.SW.Closed) or (COM_Open and not Vlv_strct.SW.Opened)),PT:=SetOvertime);
+Fb_Alrm_Tmr(IN:=Vlv_strct.CW.Enable and (COM_Close or COM_Open) and not
+	Vlv_strct.SW.RUN, PT:=t#3s);
+
+NotMove_Alrm_Tmr(IN:=Vlv_strct.CW.Enable and
+	((COM_Close and not Vlv_strct.SW.Closed) or
+	(COM_Open and not Vlv_strct.SW.Opened)),PT:=SetOvertime);
 
 if Fb_Alrm_Tmr.Q then
 	AlrmFeedBack:=true;
@@ -92,8 +96,11 @@ if Vlv_strct.CW.DisableAuto then
 end_if;
 
 
-Vlv_strct.SW.ManOK:=not Vlv_strct.SW.AlarmAccum and Vlv_strct.CW.AuxON and Vlv_strct.CW.Enable and not Vlv_strct.SW.Auto;
-Vlv_strct.SW.AutoOK:= not Vlv_strct.SW.AlarmAccum and Vlv_strct.CW.AuxON and Vlv_strct.CW.Enable and Vlv_strct.SW.Auto and Cycle.SW.Running;
+Vlv_strct.SW.ManOK:=not Vlv_strct.SW.AlarmAccum and Vlv_strct.CW.AuxON and
+	Vlv_strct.CW.Enable and not Vlv_strct.SW.Auto;
+
+Vlv_strct.SW.AutoOK:= not Vlv_strct.SW.AlarmAccum and Vlv_strct.CW.AuxON and
+	Vlv_strct.CW.Enable and Vlv_strct.SW.Auto and Cycle.SW.Running;
 
 
 	(*Manual mode activation*)
@@ -106,11 +113,17 @@ if Vlv_strct.CW.Stop or not Vlv_strct.SW.ManOK then
 end_if;
 
 	(*Auto mode activation*)
-RunAuto:= (Cycle.CW.PulseStart or RunAuto) and Vlv_strct.SW.AutoOK and Vlv_strct.SW.Auto;
+RunAuto:= (Cycle.CW.PulseStart or RunAuto) and Vlv_strct.SW.AutoOK and
+	Vlv_strct.SW.Auto;
 
 	(*Set command for start*)
-COM_Open:=((Vlv_strct.CW.AutoOpen and RunAuto and Vlv_strct.SW.AutoOK) or ((Vlv_strct.CW.ManOpen or COM_Open) and RunManual and Vlv_strct.SW.ManOK)) and not COM_Close and not Vlv_strct.SW.Opened;
-COM_Close:=((Vlv_strct.CW.AutoClose and RunAuto and Vlv_strct.SW.AutoOK) or ((Vlv_strct.CW.ManClose or COM_Close) and RunManual and Vlv_strct.SW.ManOK)) and not COM_Open and not Vlv_strct.SW.Closed;
+COM_Open:=((Vlv_strct.CW.AutoOpen and RunAuto and Vlv_strct.SW.AutoOK) or
+	((Vlv_strct.CW.ManOpen or COM_Open) and RunManual and Vlv_strct.SW.ManOK)) and not
+	COM_Close and not Vlv_strct.SW.Opened;
+
+COM_Close:=((Vlv_strct.CW.AutoClose and RunAuto and Vlv_strct.SW.AutoOK) or
+	((Vlv_strct.CW.ManClose or COM_Close) and RunManual and Vlv_strct.SW.ManOK)) and not
+	COM_Open and not Vlv_strct.SW.Closed;
 
 Vlv_strct.SW.COM_Open:=COM_Open and not Vlv_strct.CW.SimEn;
 Vlv_strct.SW.COM_Close:=COM_Close and not Vlv_strct.CW.SimEn;	

@@ -99,15 +99,18 @@ IEC_LANGUAGE: ST
 	
 	(*AO0 module parametrization*)
 (*Burner Setpoint assignment*)
-AO0_Ch1_Param(iChannelNo:=int#1,iRange:=int#4,rHiLim:=100.0,rLoLim:=0.0,rSetValue:=BrnrSP,arrParameter:=arrParamAO0);
+AO0_Ch1_Param(iChannelNo:=int#1,iRange:=int#4,rHiLim:=100.0,rLoLim:=0.0,
+	rSetValue:=BrnrSP,arrParameter:=arrParamAO0);
 	arrParamAO0:=AO0_Ch1_Param.arrParameter;
 
 (*Exhauser FC Setpoint assignment*)
-AO0_Ch2_Param(iChannelNo:=int#2,iRange:=int#2,rHiLim:=50.0,rLoLim:=0.0,rSetValue:=ExhsrSP,arrParameter:=arrParamAO0);
+AO0_Ch2_Param(iChannelNo:=int#2,iRange:=int#2,rHiLim:=50.0,rLoLim:=0.0,
+	rSetValue:=ExhsrSP,arrParameter:=arrParamAO0);
 	arrParamAO0:=AO0_Ch2_Param.arrParameter;
 	
 	(*AO0 module communication*)
-AO0_Com(xActivate:=true,iSelectCH:=int#3,arrParameter:=arrParamAO0,arrProcIN:=arrProcInAO0);
+AO0_Com(xActivate:=true,iSelectCH:=int#3,arrParameter:=arrParamAO0,
+	arrProcIN:=arrProcInAO0);
 	xAO0_Ready:=AO0_Com.xReady;
 	xAO0_Err:=AO0_Com.xError;
 	wAO0_Diag:=AO0_Com.wDiagCode;
@@ -126,20 +129,20 @@ AO0_Ch2_Diag(iChannelNo:=int#2,arrDiag:=arrDiagAO0);
 	arrDiagAO0:=AO0_Ch2_Diag.arrDiag;
 
 
-
-
-
 	(*AO1 module parametrization*)
 (*Recirculation Pump Setpoint assignment*)
-AO1_Ch1_Param(iChannelNo:=int#1,iRange:=int#2,rHiLim:=50.0,rLoLim:=0.0,rSetValue:=RecPmpSP,arrParameter:=arrParamAO1);
+AO1_Ch1_Param(iChannelNo:=int#1,iRange:=int#2,rHiLim:=50.0,rLoLim:=0.0,
+	rSetValue:=RecPmpSP,arrParameter:=arrParamAO1);
 	arrParamAO1:=AO1_Ch1_Param.arrParameter;
 
 (*Reserve*)
-AO1_Ch2_Param(iChannelNo:=int#2,iRange:=int#4,rHiLim:=100.0,rLoLim:=0.0,(*rSetValue:=,*)arrParameter:=arrParamAO1);
+AO1_Ch2_Param(iChannelNo:=int#2,iRange:=int#4,rHiLim:=100.0,rLoLim:=0.0,
+	(*rSetValue:=,*)arrParameter:=arrParamAO1);
 	arrParamAO1:=AO1_Ch2_Param.arrParameter;
 	
 	(*AO1 module communication*)
-AO1_Com(xActivate:=true,iSelectCH:=int#1,arrParameter:=arrParamAO1,arrProcIN:=arrProcInAO1);
+AO1_Com(xActivate:=true,iSelectCH:=int#1,arrParameter:=arrParamAO1,
+	arrProcIN:=arrProcInAO1);
 	xAO1_Ready:=AO1_Com.xReady;
 	xAO1_Err:=AO1_Com.xError;
 	wAO1_Diag:=AO1_Com.wDiagCode;

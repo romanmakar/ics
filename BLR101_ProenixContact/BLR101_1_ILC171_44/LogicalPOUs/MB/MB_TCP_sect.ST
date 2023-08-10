@@ -201,7 +201,18 @@ else
 end_if; 
 
 	(*MB Server #1 FB init, port 503*)
-MB_TCP_Server_V2_00_1(xActivate:=xMB_Srv1ON,xAcknowledge:=xMB_Srv1ACK,xAutoAck:=true,xUDP_Mode:=false,iTCP_Port:=int#503,tTimeout:=t#0s,uiOffsetInputRegister:=uint#0,uiOffsetHoldingRegister:=uint#0,uiOffsetInputs:=uint#0,uiOffsetCoils:=uint#0,arrModbusData:=arrMB_Srv1Data);
+MB_TCP_Server_V2_00_1(xActivate:=xMB_Srv1ON,
+	xAcknowledge:=xMB_Srv1ACK,
+	xAutoAck:=true,
+	xUDP_Mode:=false,
+	iTCP_Port:=int#503,
+	tTimeout:=t#0s,
+	uiOffsetInputRegister:=uint#0,
+	uiOffsetHoldingRegister:=uint#0,
+	uiOffsetInputs:=uint#0,
+	uiOffsetCoils:=uint#0,
+	arrModbusData:=arrMB_Srv1Data);
+
 xMB_Srv1Active:=MB_TCP_Server_V2_00_1.xActive;
 xMB_Srv1Connected:=MB_TCP_Server_V2_00_1.xConnected;
 xMB_Srv1Err:=MB_TCP_Server_V2_00_1.xError;
@@ -210,7 +221,18 @@ wMB_Srv1AddDiag:=MB_TCP_Server_V2_00_1.wAddDiagCode;
 arrMB_Srv1Data:=MB_TCP_Server_V2_00_1.arrModbusData;
 
 	(*MB Server #2 FB init, port 503*)
-MB_TCP_Server_V2_00_2(xActivate:=xMB_Srv1ON,xAcknowledge:=xMB_Srv1ACK,xAutoAck:=true,xUDP_Mode:=false,iTCP_Port:=int#503,tTimeout:=t#0s,uiOffsetInputRegister:=uint#0,uiOffsetHoldingRegister:=uint#0,uiOffsetInputs:=uint#0,uiOffsetCoils:=uint#0,arrModbusData:=arrMB_Srv1Data);
+MB_TCP_Server_V2_00_2(xActivate:=xMB_Srv1ON,
+	xAcknowledge:=xMB_Srv1ACK,
+	xAutoAck:=true,
+	xUDP_Mode:=false,
+	iTCP_Port:=int#503,
+	tTimeout:=t#0s,
+	uiOffsetInputRegister:=uint#0,
+	uiOffsetHoldingRegister:=uint#0,
+	uiOffsetInputs:=uint#0,
+	uiOffsetCoils:=uint#0,
+	arrModbusData:=arrMB_Srv1Data);
+	
 xMB_Srv2Active:=MB_TCP_Server_V2_00_2.xActive;
 xMB_Srv2Connected:=MB_TCP_Server_V2_00_2.xConnected;
 xMB_Srv2Err:=MB_TCP_Server_V2_00_2.xError;
