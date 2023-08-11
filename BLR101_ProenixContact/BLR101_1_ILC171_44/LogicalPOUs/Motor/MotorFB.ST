@@ -149,13 +149,13 @@ else
 end_if;
 
     (*Status processing*)
-if Mot_strct.SW.AlarmAccum then													(*Alarm*)
+if Mot_strct.SW.AlarmAccum then	                                                (*Alarm*)
     Mot_strct.Status:=word#2;
-elsif not Mot_strct.CW.ExtraEn then												(*Blocking*)
+elsif not Mot_strct.CW.ExtraEn then                                             (*Blocking*)
     Mot_strct.Status:=word#4;
-elsif Mot_strct.SW.COM then														(*Working*)
+elsif Mot_strct.SW.COM then                                                     (*Working*)
     Mot_strct.Status:=word#1;
-else																			(*Stoped*)
+else                                                                            (*Stoped*)
     Mot_strct.Status:=word#0;
 end_if;
 

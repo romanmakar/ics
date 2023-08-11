@@ -78,16 +78,16 @@ END_IF;
 
     (*SMA filter operation*)
 CycTmr(IN:= NOT CycTmr.Q AND INIT, 
-    PT:= DINT_TO_TIME(INT_TO_DINT(Snsr_strct.SamplingTime * 1000)));			(*Sample puls generator*)
+    PT:= DINT_TO_TIME(INT_TO_DINT(Snsr_strct.SamplingTime * 1000)));            (*Sample puls generator*)
 IF Snsr_strct.CW.FltrEn THEN
-    IF NOT INIT THEN															(*Initialization*)
+    IF NOT INIT THEN                                                            (*Initialization*)
         FOR y:= 0 TO 9 DO
             Buff[y]:= RealValue;
             SumValue:= SumValue + Buff[y];
         END_FOR;
         INIT:= TRUE;
     ELSE
-        IF CycTmr.Q THEN														(*Buffer shifting and changing last element*)
+        IF CycTmr.Q THEN                                                        (*Buffer shifting and changing last element*)
             FOR y:= 0 TO 8 DO
                 x:= y + 1;
                 Buff[y]:= Buff[x];
@@ -104,11 +104,11 @@ ELSE
 END_IF;	
 
     (*Snsr_strct output values states*)
-IF Snsr_strct.CW.SimEn THEN														(*Simulated output value*)						
+IF Snsr_strct.CW.SimEn THEN                                                     (*Simulated output value*)						
     Snsr_strct.RealValue:= Snsr_strct.SimValue;
-ELSIF Snsr_strct.CW.FltrEn THEN													(*Filtered output value*)
+ELSIF Snsr_strct.CW.FltrEn THEN                                                 (*Filtered output value*)
     Snsr_strct.RealValue:= FltrValue;
-ELSE																			(*Real output value*)
+ELSE                                                                            (*Real output value*)
     Snsr_strct.RealValue:= RealValue;
 END_IF;
 

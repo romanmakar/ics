@@ -153,11 +153,11 @@ case i of
         iSlvRegCount:= 20;
 
     1:	uiSlvAddr:= uint#2;
-        uiSlvReg:= uint#16029;													(*reg.16029 Status Word*)
+        uiSlvReg:= uint#16029;                                                  (*reg.16029 Status Word*)
         iSlvRegCount:= 2;
 
     2:	uiSlvAddr:= uint#3;
-        uiSlvReg:= uint#16029;													(*reg.16029 Status Word*)
+        uiSlvReg:= uint#16029;                                                  (*reg.16029 Status Word*)
         iSlvRegCount:= 2;
 
     3:	uiSlvAddr:= uint#4;
@@ -185,11 +185,11 @@ case i of
         iSlvRegCount:= 20;
 
     9:	uiSlvAddr:= uint#2;
-        uiSlvReg:= uint#16129;													(*reg.16129 Frequency Hz*)
+        uiSlvReg:= uint#16129;                                                  (*reg.16129 Frequency Hz*)
         iSlvRegCount:= 2;
 
     10:	uiSlvAddr:= uint#3;
-        uiSlvReg:= uint#16129;													(*reg.16129 Frequency Hz*)
+        uiSlvReg:= uint#16129;                                                  (*reg.16129 Frequency Hz*)
         iSlvRegCount:= 2;
 
     11:	uiSlvAddr:= uint#4;
@@ -197,43 +197,43 @@ case i of
         iSlvRegCount:= 2;
 
     12:	uiSlvAddr:= uint#2;
-        uiSlvReg:= uint#16139;													(*reg.16139 Motor Current A*)
+        uiSlvReg:= uint#16139;                                                  (*reg.16139 Motor Current A*)
         iSlvRegCount:= 2;
 
     13:	uiSlvAddr:= uint#3;
-        uiSlvReg:= uint#16139;													(*reg.16139 Motor Current A*)
+        uiSlvReg:= uint#16139;                                                  (*reg.16139 Motor Current A*)
         iSlvRegCount:= 2;
 
     14:	uiSlvAddr:= uint#2;
-        uiSlvReg:= uint#16899;													(*reg.16899 Alarm Word*)
+        uiSlvReg:= uint#16899;                                                  (*reg.16899 Alarm Word*)
         iSlvRegCount:= 2;
 
     15:	uiSlvAddr:= uint#3;
-        uiSlvReg:= uint#16899;													(*reg.16899 Alarm Word*)
+        uiSlvReg:= uint#16899;                                                  (*reg.16899 Alarm Word*)
         iSlvRegCount:= 2;
 
     16:	uiSlvAddr:= uint#2;
-        uiSlvReg:= uint#16919;													(*reg.16919 Warning Word*)
+        uiSlvReg:= uint#16919;                                                  (*reg.16919 Warning Word*)
         iSlvRegCount:= 2;
 
     17:	uiSlvAddr:= uint#3;
-        uiSlvReg:= uint#16919;													(*reg.16919 Warning Word*)
+        uiSlvReg:= uint#16919;                                                  (*reg.16919 Warning Word*)
         iSlvRegCount:= 2;
 
     18:	uiSlvAddr:= uint#2;
-        uiSlvReg:= uint#15009;													(*reg.15009 Running hours h*)
+        uiSlvReg:= uint#15009;                                                  (*reg.15009 Running hours h*)
         iSlvRegCount:= 2;
 
     19:	uiSlvAddr:= uint#3;
-        uiSlvReg:= uint#15009;													(*reg.15009 Running hours h*)
+        uiSlvReg:= uint#15009;                                                  (*reg.15009 Running hours h*)
         iSlvRegCount:= 2;
 
     20:	uiSlvAddr:= uint#2;
-        uiSlvReg:= uint#15019;													(*reg.15019 kWh Counter*)
+        uiSlvReg:= uint#15019;                                                  (*reg.15019 kWh Counter*)
         iSlvRegCount:= 2;
 
     21:	uiSlvAddr:= uint#3;
-        uiSlvReg:= uint#15019;													(*reg.15019 kWh Counter*)
+        uiSlvReg:= uint#15019;                                                  (*reg.15019 kWh Counter*)
         iSlvRegCount:= 2;
 end_case;
 

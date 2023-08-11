@@ -137,13 +137,13 @@ end_if;
 
 
     (*Status processing*)
-if Brn_strct.SW.AlarmAccum then													(*Alarm*)
+if Brn_strct.SW.AlarmAccum then                                                 (*Alarm*)
     Brn_strct.Sys.Status:=word#2;
-elsif not Brn_strct.CW.ExtraEn then												(*Blocking*)
+elsif not Brn_strct.CW.ExtraEn then                                             (*Blocking*)
     Brn_strct.Sys.Status:=word#4;
-elsif Brn_strct.SW.COM then														(*Working*)
+elsif Brn_strct.SW.COM then                                                     (*Working*)
     Brn_strct.Sys.Status:=word#1;
-else																			(*Stoped*)
+else                                                                            (*Stoped*)
     Brn_strct.Sys.Status:=word#0;
 end_if;
 
