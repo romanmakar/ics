@@ -15,26 +15,26 @@ PROGRAM GasCount
 
 
 VAR
-	Tick :	BOOL;
-	TickCount :	INT;
-	GasCounterPulse :	R_TRIG;
+    Tick :	BOOL;
+    TickCount :	INT;
+    GasCounterPulse :	R_TRIG;
 END_VAR
 
 
 VAR_EXTERNAL
-	GasCntPls :	BOOL;
+    GasCntPls :	BOOL;
 END_VAR
 
 
 VAR
-	TicksNum :	REAL;
-	GasFlow :	REAL;
-	FlowPerTick :	REAL;
+    TicksNum :	REAL;
+    GasFlow :	REAL;
+    FlowPerTick :	REAL;
 END_VAR
 
 
 VAR_EXTERNAL
-	Boiler :	Blr;
+    Boiler :	Blr;
 END_VAR
 
 
@@ -45,20 +45,20 @@ IEC_LANGUAGE: ST
 Tick:= not Tick;
 
 if Tick then
-	TickCount:= TickCount + 1;
-	Tick:= false;
+    TickCount:= TickCount + 1;
+    Tick:= false;
 end_if; 
 
 if TickCount > 6000 then
-	TickCount:= 0;
-	TicksNum:= 0.0;
+    TickCount:= 0;
+    TicksNum:= 0.0;
 end_if;
 
 GasCounterPulse(CLK:=GasCntPls);
 
 if GasCounterPulse.Q then
-	TicksNum:= int_to_real(TickCount);
-	TickCount:= 0;
+    TicksNum:= int_to_real(TickCount);
+    TickCount:= 0;
 end_if;
 
 GasFlow:= (360000.0 * TicksNum) / (TicksNum * TicksNum + 1.0);

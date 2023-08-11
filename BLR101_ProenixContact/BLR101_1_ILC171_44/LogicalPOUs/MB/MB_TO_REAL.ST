@@ -15,28 +15,28 @@ FUNCTION_BLOCK MB_TO_REAL
 
 
 VAR
-	ReSyBasic_IEEEToRealV10_1 :	ReSyBasic_IEEEToRealV10;
-	ReSyBasic_WordToByteV01_1 :	ReSyBasic_WordToByteV01;
-	ReSyBasic_WordToByteV01_2 :	ReSyBasic_WordToByteV01;
+    ReSyBasic_IEEEToRealV10_1 :	ReSyBasic_IEEEToRealV10;
+    ReSyBasic_WordToByteV01_1 :	ReSyBasic_WordToByteV01;
+    ReSyBasic_WordToByteV01_2 :	ReSyBasic_WordToByteV01;
 END_VAR
 
 
 VAR_INPUT
-	IN_LoWord :	WORD;
-	IN_HiWord :	WORD;
+    IN_LoWord :	WORD;
+    IN_HiWord :	WORD;
 END_VAR
 
 
 VAR
-	ValMantMid :	BYTE;
-	ValMantLow :	BYTE;
-	ValExp :	BYTE;
-	ValMantHigh :	BYTE;
+    ValMantMid :	BYTE;
+    ValMantLow :	BYTE;
+    ValExp :	BYTE;
+    ValMantHigh :	BYTE;
 END_VAR
 
 
 VAR_OUTPUT
-	Float :	REAL;
+    Float :	REAL;
 END_VAR
 
 
@@ -45,23 +45,23 @@ NAME: MB_TO_REAL
 IEC_LANGUAGE: ST
 *)
 
-		(*Converting Low WORD to Low BYTEs*)
+        (*Converting Low WORD to Low BYTEs*)
 ReSyBasic_WordToByteV01_1(IN_LX_DisablePou:=false,IN_LW_1:=IN_LoWord);
 ValMantMid:=ReSyBasic_WordToByteV01_1.OUT_LB_High;
 ValMantLow:=ReSyBasic_WordToByteV01_1.OUT_LB_Low;
 
-		(*Converting High WORD to High BYTEs*)
+        (*Converting High WORD to High BYTEs*)
 ReSyBasic_WordToByteV01_2(IN_LX_DisablePou:=false,IN_LW_1:=IN_HiWord);
 ValExp:=ReSyBasic_WordToByteV01_2.OUT_LB_High;
 ValMantHigh:=ReSyBasic_WordToByteV01_2.OUT_LB_Low;
 
-		(*Converting BYTEs to REAL*)
+        (*Converting BYTEs to REAL*)
 ReSyBasic_IEEEToRealV10_1(IN_LX_DisablePou:=false,
-	IN_LB_ValueMantissaLow:=ValMantLow,
-	IN_LB_ValueMantissaMiddle:=ValMantMid,
-	IN_LB_ValueMantissaHigh:=ValMantHigh,
-	IN_LB_ValueExponent:=ValExp);
-	
+    IN_LB_ValueMantissaLow:=ValMantLow,
+    IN_LB_ValueMantissaMiddle:=ValMantMid,
+    IN_LB_ValueMantissaHigh:=ValMantHigh,
+    IN_LB_ValueExponent:=ValExp);
+    
 Float:=ReSyBasic_IEEEToRealV10_1.OUT_LR_Value;
 
 (*@KEY@: END_WORKSHEET *)
