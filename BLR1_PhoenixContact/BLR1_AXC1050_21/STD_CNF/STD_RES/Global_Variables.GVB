@@ -1,0 +1,333 @@
+
+(*Group:Motor*)
+
+
+VAR_GLOBAL
+	M :	MOTOR;
+	M_AUX :	MOTOR_MISC;
+	Blr11_BrnRun :	BOOL;
+	Blr11_BrnFault :	BOOL;
+	Blr12_BrnRun :	BOOL;
+	Blr12_BrnFault :	BOOL;
+	Blr13_BrnRun :	BOOL;
+	Blr13_BrnFault :	BOOL;
+	Blr21_BrnRun :	BOOL;
+	Blr21_BrnFault :	BOOL;
+	Blr22_BrnRun :	BOOL;
+	Blr22_BrnFault :	BOOL;
+	Blr1CapacityLim :	BOOL;
+	Blr2CapacityLim :	BOOL;
+	Blr11_EmergCirc :	BOOL;
+	Blr12_EmergCirc :	BOOL;
+	Blr13_EmergCirc :	BOOL;
+	Blr21_EmergCirc :	BOOL;
+	Blr22_EmergCirc :	BOOL;
+	M_EVENT :	MOTOR_EVENT;
+END_VAR
+
+
+(*Group:Sensor*)
+
+
+VAR_GLOBAL
+	AI :	SENSOR;
+	AI_Event :	SENSOR_EVENT;
+	Blr11_GasFlowPls :	BOOL;
+	Blr12_GasFlowPls :	BOOL;
+	Blr13_GasFlowPls :	BOOL;
+	AI_AUX :	SENSOR_MISC;
+END_VAR
+
+
+(*Group:SP*)
+(*Group:Valve*)
+
+
+VAR_GLOBAL
+	V :	VALVE;
+	V_AUX :	VALVE_MISC;
+END_VAR
+
+
+(*Group:Reg*)
+
+
+VAR_GLOBAL
+	RGLTR :	REGULATOR;
+END_VAR
+
+
+(*Group:Main*)
+
+
+VAR_GLOBAL
+	Cycle :	CCL;
+	WarnWord :	WRN;
+	ACK :	BOOL;
+	ALARM_HL :	BOOL;
+	ALARM_HA :	BOOL;
+	TICK_100MS :	BOOL;
+	TICK_100MS_PLS :	BOOL;
+	TICK_1S :	BOOL;
+	TICK_1S_PLS :	BOOL;
+	CCL :	CYCLE;
+END_VAR
+
+
+(*Group:MB_RTU*)
+
+
+VAR_GLOBAL
+	arrInData_AXL_RSUNI_1	AT %IB0 :	MB2_AXL_RSUNI2_ARR_B_0_19;
+	arrOutData_AXL_RSUNI_1	AT %QB0 :	MB2_AXL_RSUNI2_ARR_B_0_19;
+	SlvData_RSUNI_1 :	MBRTU_SlvData;
+	arrInData_AXL_RSUNI_2	AT %IB95 :	MB2_AXL_RSUNI2_ARR_B_0_19;
+	arrOutData_AXL_RSUNI_2	AT %QB109 :	MB2_AXL_RSUNI2_ARR_B_0_19;
+	SlvData_RSUNI_2 :	MBRTU_SlvData;
+END_VAR
+
+
+(*Group:MB_TCP*)
+
+
+VAR_GLOBAL RETAIN 
+	MBTCP_Data :	MB_TCP_ARR_W_0_7167;
+END_VAR
+
+
+(*Group:Hardware*)
+
+
+VAR_GLOBAL
+	IDW0	AT %ID20 :	DWORD;
+	QW0	AT %QW24 :	WORD;
+	IDW1	AT %ID116 :	DWORD;
+	IDW2	AT %ID121 :	DWORD;
+	QW1	AT %QW130 :	WORD;
+	QW2	AT %QW133 :	WORD;
+	BK_PnioDataValid :	BOOL;
+	A04_IN0	AT %IW26 :	INT;
+	A04_IN1	AT %IW28 :	INT;
+	A04_IN2	AT %IW30 :	INT;
+	A04_IN3	AT %IW32 :	INT;
+	A04_IN4	AT %IW34 :	INT;
+	A04_IN5	AT %IW36 :	INT;
+	A04_IN6	AT %IW38 :	INT;
+	A04_IN7	AT %IW40 :	INT;
+	A05_IN0	AT %IW42 :	INT;
+	A05_IN1	AT %IW44 :	INT;
+	A05_IN2	AT %IW46 :	INT;
+	A05_IN3	AT %IW48 :	INT;
+	A05_IN4	AT %IW50 :	INT;
+	A05_IN5	AT %IW52 :	INT;
+	A05_IN6	AT %IW54 :	INT;
+	A05_IN7	AT %IW56 :	INT;
+	A06_IN0	AT %IW58 :	INT;
+	A06_IN1	AT %IW60 :	INT;
+	A06_IN2	AT %IW62 :	INT;
+	A06_IN3	AT %IW64 :	INT;
+	A06_IN4	AT %IW66 :	INT;
+	A06_IN5	AT %IW68 :	INT;
+	A16_IN0	AT %IW126 :	INT;
+	A16_IN1	AT %IW128 :	INT;
+	A16_IN2	AT %IW130 :	INT;
+	A16_IN3	AT %IW132 :	INT;
+	A16_IN4	AT %IW134 :	INT;
+	A16_IN5	AT %IW136 :	INT;
+	A16_IN6	AT %IW138 :	INT;
+	A16_IN7	AT %IW140 :	INT;
+	A17_IN0	AT %IW143 :	INT;
+	A17_IN1	AT %IW145 :	INT;
+	A17_IN2	AT %IW147 :	INT;
+	A17_IN3	AT %IW149 :	INT;
+	A17_IN4	AT %IW151 :	INT;
+	A17_IN5	AT %IW153 :	INT;
+	A17_IN6	AT %IW155 :	INT;
+	A17_IN7	AT %IW157 :	INT;
+	A18_IN0	AT %IW160 :	INT;
+	A18_IN1	AT %IW162 :	INT;
+	A18_IN2	AT %IW164 :	INT;
+	A18_IN3	AT %IW166 :	INT;
+	A18_IN4	AT %IW168 :	INT;
+	A18_IN5	AT %IW170 :	INT;
+	A18_IN6	AT %IW172 :	INT;
+	A18_IN7	AT %IW174 :	INT;
+	A19_IN0	AT %IW177 :	INT;
+	A19_IN1	AT %IW179 :	INT;
+	A19_IN2	AT %IW181 :	INT;
+	A19_IN3	AT %IW183 :	INT;
+	A19_IN4	AT %IW185 :	INT;
+	A19_IN5	AT %IW187 :	INT;
+	A19_IN6	AT %IW189 :	INT;
+	A19_IN7	AT %IW191 :	INT;
+	A110_IN0	AT %IW194 :	INT;
+	A110_IN1	AT %IW196 :	INT;
+	A110_IN2	AT %IW198 :	INT;
+	A110_IN3	AT %IW200 :	INT;
+	A110_IN4	AT %IW202 :	INT;
+	A110_IN5	AT %IW204 :	INT;
+	A110_IN6	AT %IW206 :	INT;
+	A110_IN7	AT %IW208 :	INT;
+	A111_IN0	AT %IW211 :	INT;
+	A111_IN1	AT %IW213 :	INT;
+	A111_IN2	AT %IW215 :	INT;
+	A111_IN3	AT %IW217 :	INT;
+	A111_IN4	AT %IW219 :	INT;
+	A111_IN5	AT %IW221 :	INT;
+	A111_IN6	AT %IW223 :	INT;
+	A111_IN7	AT %IW225 :	INT;
+	A112_IN0	AT %IW228 :	INT;
+	A112_IN1	AT %IW230 :	INT;
+	A112_IN2	AT %IW232 :	INT;
+	A112_IN3	AT %IW234 :	INT;
+	A112_IN4	AT %IW236 :	INT;
+	A112_IN5	AT %IW238 :	INT;
+	A112_IN6	AT %IW240 :	INT;
+	A112_IN7	AT %IW242 :	INT;
+	A113_IN0	AT %IW245 :	INT;
+	A113_IN1	AT %IW247 :	INT;
+	A113_IN2	AT %IW249 :	INT;
+	A113_IN3	AT %IW251 :	INT;
+	A113_IN4	AT %IW253 :	INT;
+	A113_IN5	AT %IW255 :	INT;
+	A113_IN6	AT %IW257 :	INT;
+	A113_IN7	AT %IW259 :	INT;
+	A114_IN0	AT %IW262 :	INT;
+	A114_IN1	AT %IW264 :	INT;
+	A114_IN2	AT %IW266 :	INT;
+	A114_IN3	AT %IW268 :	INT;
+	A114_IN4	AT %IW270 :	INT;
+	A114_IN5	AT %IW272 :	INT;
+	A114_IN6	AT %IW274 :	INT;
+	A114_IN7	AT %IW276 :	INT;
+	A115_IN0	AT %IW279 :	INT;
+	A115_IN1	AT %IW281 :	INT;
+	A115_IN2	AT %IW283 :	INT;
+	A115_IN3	AT %IW285 :	INT;
+	A115_IN4	AT %IW287 :	INT;
+	A115_IN5	AT %IW289 :	INT;
+	A115_IN6	AT %IW291 :	INT;
+	A115_IN7	AT %IW293 :	INT;
+	A06_IN7	AT %IW72 :	INT;
+	A06_IN6	AT %IW70 :	INT;
+	A07_IN0	AT %IW74 :	INT;
+	A07_OUT0	AT %QW74 :	INT;
+	A07_IN1	AT %IW76 :	INT;
+	A07_OUT1	AT %QW76 :	INT;
+	A07_IN2	AT %IW78 :	INT;
+	A07_OUT2	AT %QW78 :	INT;
+	A07_IN3	AT %IW80 :	INT;
+	A07_OUT3	AT %QW80 :	INT;
+	A07_IN4	AT %IW82 :	INT;
+	A07_OUT4	AT %QW82 :	INT;
+	A116_IN0	AT %IW296 :	INT;
+	A116_OUT0	AT %QW136 :	INT;
+	A116_IN1	AT %IW298 :	INT;
+	A116_OUT1	AT %QW138 :	INT;
+	A116_IN2	AT %IW300 :	INT;
+	A116_OUT2	AT %QW140 :	INT;
+	A116_IN3	AT %IW302 :	INT;
+	A116_OUT3	AT %QW142 :	INT;
+	A116_IN4	AT %IW304 :	INT;
+	A116_OUT4	AT %QW144 :	INT;
+	A116_IN5	AT %IW306 :	INT;
+	A116_OUT5	AT %QW146 :	INT;
+	A116_IN6	AT %IW308 :	INT;
+	A116_OUT6	AT %QW148 :	INT;
+	A116_IN7	AT %IW310 :	INT;
+	A116_OUT7	AT %QW150 :	INT;
+	A117_IN0	AT %IW313 :	INT;
+	A117_OUT0	AT %QW153 :	INT;
+END_VAR
+
+
+(*Group:System Variables*)
+
+
+VAR_GLOBAL
+	PLCMODE_ON	AT %MX1.2016.0 :	BOOL {PDD};(*PLC status ON*)
+	PLCMODE_LOADING	AT %MX1.2017.0 :	BOOL;(*PLC status LOADING*)
+	PLCMODE_RUN	AT %MX1.7.0 :	BOOL;(*PLC status RUN*)
+	PLCMODE_STOP	AT %MX1.6.0 :	BOOL;(*PLC status STOP*)
+	PLCMODE_HALT	AT %MX1.8.0 :	BOOL;(*PLC status HALT*)
+	PLCDEBUG_BPSET	AT %MX1.2019.0 :	BOOL;(*Breakpoint set*)
+	PLCDEBUG_FORCE	AT %MX1.2018.0 :	BOOL;(*Variable(s) forced*)
+	PLCDEBUG_POWERFLOW	AT %MX1.2020.0 :	BOOL;(*Address status enabled*)
+	PLC_TICKS_PER_SEC	AT %MW1.2000 :	INT;(*System ticks per second*)
+	PLC_SYS_TICK_CNT	AT %MD1.0 :	DINT;(*Number of system ticks*)
+	PLC_TASK_AVAILABLE	AT %MW1.2012 :	INT;(*Number of available PLC tasks*)
+	PLC_SYSTASK_AVAILABLE	AT %MW1.2016 :	INT;(*Number of available system tasks*)
+	PLC_MAX_ERRORS	AT %MD1.2004 :	DINT;
+	PLC_ERRORS	AT %MD1.2008 :	DINT;
+	PLC_TASK_DEFINED	AT %MW1.4 :	INT;(*Number of tasks used*)
+	PLC_TASK_1	AT %MB1.5000 :	Task_Info_eCLR;(*Task 1 information*)
+	PLC_TASK_2	AT %MB1.5128 :	Task_Info_eCLR;(*Task 2 information*)
+	PLC_TASK_3	AT %MB1.5256 :	Task_Info_eCLR;(*Task 3 information*)
+	PLC_TASK_4	AT %MB1.5384 :	Task_Info_eCLR;(*Task 4 information*)
+	PLC_TASK_5	AT %MB1.5512 :	Task_Info_eCLR;(*Task 5 information*)
+	PLC_TASK_6	AT %MB1.5640 :	Task_Info_eCLR;(*Task 6 information*)
+	PLC_TASK_7	AT %MB1.5768 :	Task_Info_eCLR;(*Task 7 information*)
+	PLC_TASK_8	AT %MB1.5896 :	Task_Info_eCLR;(*Task 8 information*)
+	LICENSE	AT %MD1.60112 :	DWORD;(*License information*)
+	AXIO_DIAG_STATUS_REG_HI	AT %MB1.60001 :	BYTE;(*Diagnostic status register high byte*)
+	AXIO_DIAG_STATUS_REG_LOW	AT %MB1.60000 :	BYTE;(*Diagnostic status register low byte*)
+	AXIO_DIAG_PARAM_REG_HI	AT %MB1.60003 :	BYTE;(*Diagnostic parameter register high byte*)
+	AXIO_DIAG_PARAM_REG_LOW	AT %MB1.60002 :	BYTE;(*Diagnostic parameter register low byte*)
+	AXIO_DIAG_PARAM_2_REG_HI	AT %MB1.60005 :	BYTE;(*Extended diagnostic parameter register high byte*)
+	AXIO_DIAG_PARAM_2_REG_LOW	AT %MB1.60004 :	BYTE;(*Extended diagnostic parameter register low byte*)
+	AXIO_DIAG_STATUS_REG_PF	AT %MX1.60149.0 :	BOOL;(*Peripheral fault (derived from diagnostic status register)*)
+	AXIO_DIAG_STATUS_REG_PW	AT %MX1.60148.0 :	BOOL;(*Peripheral warning (derived from diagnostic status register)*)
+	AXIO_DIAG_STATUS_REG_BUS	AT %MX1.60150.0 :	BOOL;(*Bus error (derived from diagnostic status register)*)
+	AXIO_DIAG_STATUS_REG_RUN	AT %MX1.60153.0 :	BOOL;(*Data transmission active (derived from diagnostic status register)*)
+	AXIO_DIAG_STATUS_REG_ACT	AT %MX1.60154.0 :	BOOL;(*Selected configuration is ready to operate (derived from diagnostic status register)*)
+	AXIO_DIAG_STATUS_REG_RDY	AT %MX1.60155.0 :	BOOL;(*Controller board ready to operate (derived from diagnostic status register)*)
+	AXIO_DIAG_STATUS_REG_SYSFAIL	AT %MX1.60141.0 :	BOOL;(*The controller is in the STOP state or no application program is loaded.*)
+	PNIO_FORCE_FAILSAFE	AT %MX3.61100.0 :	BOOL;(*All PROFINET devices are prompted to set their configured substitute values*)
+	PNIO_CONFIG_STATUS	AT %MW1.60200 :	WORD;(*Current configuration status of the context manager*)
+	PNIO_CONFIG_STATUS_READY	AT %MX1.60202.0 :	BOOL;(*Context manager active*)
+	PNIO_CONFIG_STATUS_ACTIVE	AT %MX1.60203.0 :	BOOL;(*Communication started*)
+	PNIO_CONFIG_STATUS_CFG_FAULT	AT %MX1.60204.0 :	BOOL;(*Configuration error*)
+	PNIO_SYSTEM_BF	AT %MX1.60208.0 :	BOOL;(*Missing connection to a configured PROFINET device*)
+	PNIO_SYSTEM_SF	AT %MX1.60210.0 :	BOOL;(*Diagnostic alarm for a configured PROFINET device*)
+	PNIO_DIAG_AVAILABLE	AT %MX1.60214.0 :	BOOL;(*Diagnostic available*)
+	PNIO_MAINTENANCE_REQUIRED	AT %MX1.60215.0 :	BOOL;(*Maintenance required*)
+	PNIO_MAINTENANCE_DEMANDED	AT %MX1.60216.0 :	BOOL;(*Maintenance demanded*)
+	PND_S1_PLC_RUN	AT %IX63972.0 :	BOOL;(*Status of the higher-level control system*)
+	PND_S1_VALID_DATA_CYCLE	AT %IX63973.0 :	BOOL;(*IO Controller has established the connection*)
+	PND_S1_OUTPUT_STATUS_GOOD	AT %IX63974.0 :	BOOL;(*IOP status of the higher-level control system*)
+	PND_S1_INPUT_STATUS_GOOD	AT %IX63975.0 :	BOOL;(*IOC status of the higher-level control system*)
+	PND_S1_DATA_LENGTH	AT %IW63976 :	WORD;(*Process data length*)
+	PND_S1_OUTPUTS	AT %QB63988 :	PND_IO_256;(*Output process data*)
+	PND_S1_INPUTS	AT %IB63988 :	PND_IO_256;(*Input process data*)
+	PND_IO_DRIVEN_BY_PLC	AT %IW63978 :	INT;(*Number of the PLC currently connected with the PNIO Device*)
+	COP_DIAG_STATUS_REG_RT_ERR	AT %MX1.60156.0 :	BOOL;(*Runtime error (control processor)*)
+	COP_DIAG_STATUS_REG_FAT_ERR	AT %MX1.60157.0 :	BOOL;(*Fatal error (control processor)*)
+	COP_DIAG_STATUS_REG_WARN	AT %MX1.60158.0 :	BOOL;(*Warning (control processor)*)
+	COP_DIAG_STATUS_REG_PON	AT %MX1.60159.0 :	BOOL;(*Power on (control processor)*)
+	COP_DIAG_STATUS_REG_FC_RUN	AT %MX1.60160.0 :	BOOL;(*Runtime system RUN*)
+	COP_DIAG_STATUS_REG_FC_STOP	AT %MX1.60161.0 :	BOOL;(*Runtime system STOP*)
+	COP_DIAG_STATUS_REG_FC_HALT	AT %MX1.60162.0 :	BOOL;(*Runtime system HALT*)
+	COP_DIAG_STATUS_REG_FC_LDG	AT %MX1.60163.0 :	BOOL;(*Runtime system LOADING*)
+	COP_DIAG_STATUS_REG_FC_DBG	AT %MX1.60164.0 :	BOOL;(*Runtime system DEBUG*)
+	COP_DIAG_STATUS_REG_FC_RDO	AT %MX1.60165.0 :	BOOL;(*Runtime system READONLY*)
+	COP_DIAG_PARAM_REG	AT %MW1.60022 :	WORD;(*Diagnostic parameter register of the control processor*)
+	COP_DIAG_PARAM_2_REG	AT %MW1.60024 :	WORD;(*Extended diagnostic parameter register of the control processor*)
+	UPS_BATTERY_OK	AT %MX1.60175.0 :	BOOL;(*UPS battery fully charged*)
+	COP_CPU_LOAD_WARNING	AT %MX1.60182.0 :	BOOL;(*The controller is approaching its processor capacity limit*)
+	RTC_BATTERY_LOW	AT %MX1.60166.0 :	BOOL;(*Realtime clock battery capacity low*)
+	RTC_DATA_INVALID	AT %MX1.60167.0 :	BOOL;(*Realtime clock data invalid*)
+	FLASHCARD_PRESENT	AT %MX1.60168.0 :	BOOL;(*Phoenix Contact SD card inserted*)
+	POWER_SUPPLY_MAIN_OK	AT %MX1.60171.0 :	BOOL;(*24 V main supply voltage OK*)
+	KEY_SWITCH_RESET	AT %MX1.60178.0 :	BOOL;(*Start/stop switch in MRESET position*)
+	KEY_SWITCH_STOP	AT %MX1.60179.0 :	BOOL;(*Start/stop switch in STOP position*)
+	KEY_SWITCH_RUN_PROG	AT %MX1.60181.0 :	BOOL;(*Start/stop switch in RUN/PROG position*)
+	RTC_HOURS	AT %MW1.60060 :	INT;(*System time (hours)*)
+	RTC_MINUTES	AT %MW1.60062 :	INT;(*System time (minutes)*)
+	RTC_SECONDS	AT %MW1.60064 :	INT;(*System time (seconds)*)
+	RTC_DAY	AT %MW1.60068 :	INT;(*System time (day)*)
+	RTC_MONTH	AT %MW1.60070 :	INT;(*System time (month)*)
+	RTC_YEAR	AT %MW1.60072 :	INT;(*System time (year)*)
+	PND_RESET_FACTORY_SETTINGS	AT %MW3.61060 :	WORD;(*shows the bits of the kind of a reset to factory service*)
+END_VAR
+
+

@@ -1,0 +1,106 @@
+PROGRAM IN02 : INPUT
+(
+	(* @OWNER := Auto_MB *)
+	VAR_ADR := 338,
+	END_VAR_ADR := 338,
+	DEVICE := DRIVER,
+	DRIVER_NAME := 'eclriodrv_mbc',
+	DRIVER_PAR1 := 0,
+	DRIVER_PAR2 := 0,
+	DRIVER_PAR3 := 0,
+	DRIVER_PAR4 := 0,
+	DATA_TYPE := WORD
+);
+PROGRAM OUT02 : OUTPUT
+(
+	(* @OWNER := Auto_MB *)
+	VAR_ADR := 174,
+	END_VAR_ADR := 174,
+	DEVICE := DRIVER,
+	DRIVER_NAME := 'eclriodrv_mbc',
+	DRIVER_PAR1 := 0,
+	DRIVER_PAR2 := 0,
+	DRIVER_PAR3 := 0,
+	DRIVER_PAR4 := 0,
+	DATA_TYPE := WORD
+);
+PROGRAM IN00 : INPUT
+(
+	(* @OWNER := Auto_Axioline *)
+	VAR_ADR := 0,
+	END_VAR_ADR := 89,
+	DEVICE := DRIVER,
+	DRIVER_NAME := 'eclriodrv_axio',
+	DRIVER_PAR1 := 0,
+	DRIVER_PAR2 := 0,
+	DRIVER_PAR3 := 0,
+	DRIVER_PAR4 := 0,
+	DATA_TYPE := BYTE
+);
+PROGRAM OUT00 : OUTPUT
+(
+	(* @OWNER := Auto_Axioline *)
+	VAR_ADR := 0,
+	END_VAR_ADR := 89,
+	DEVICE := DRIVER,
+	DRIVER_NAME := 'eclriodrv_axio',
+	DRIVER_PAR1 := 0,
+	DRIVER_PAR2 := 0,
+	DRIVER_PAR3 := 0,
+	DRIVER_PAR4 := 0,
+	DATA_TYPE := BYTE
+);
+(*PROFINET Device input-output range*)
+PROGRAM IN_PNPD : INPUT
+(
+	(* @OWNER := Auto_Slave *)
+	VAR_ADR := 63972,
+	END_VAR_ADR := 64245,
+	DEVICE := DRIVER,
+	DRIVER_NAME := 'eclrIoDrv_PND30',
+	DRIVER_PAR1 := 1,
+	DRIVER_PAR2 := 1,
+	DRIVER_PAR3 := 0,
+	DRIVER_PAR4 := 0,
+	DATA_TYPE := BYTE
+);
+(*PROFINET Device input-output range*)
+PROGRAM OUT_PNPD : OUTPUT
+(
+	(* @OWNER := Auto_Slave *)
+	VAR_ADR := 63972,
+	END_VAR_ADR := 64245,
+	DEVICE := DRIVER,
+	DRIVER_NAME := 'eclrIoDrv_PND30',
+	DRIVER_PAR1 := 1,
+	DRIVER_PAR2 := 1,
+	DRIVER_PAR3 := 0,
+	DRIVER_PAR4 := 0,
+	DATA_TYPE := BYTE
+);
+PROGRAM OUT01 : OUTPUT
+(
+	(* @OWNER := Auto_PROFINET *)
+	VAR_ADR := 90,
+	END_VAR_ADR := 173,
+	DEVICE := DRIVER,
+	DRIVER_NAME := 'eclrIoDrv_PN',
+	DRIVER_PAR1 := 0,
+	DRIVER_PAR2 := 0,
+	DRIVER_PAR3 := 1,
+	DRIVER_PAR4 := 80,
+	DATA_TYPE := BYTE
+);
+PROGRAM IN01 : INPUT
+(
+	(* @OWNER := Auto_PROFINET *)
+	VAR_ADR := 90,
+	END_VAR_ADR := 337,
+	DEVICE := DRIVER,
+	DRIVER_NAME := 'eclrIoDrv_PN',
+	DRIVER_PAR1 := 0,
+	DRIVER_PAR2 := 0,
+	DRIVER_PAR3 := 1,
+	DRIVER_PAR4 := 244,
+	DATA_TYPE := BYTE
+);

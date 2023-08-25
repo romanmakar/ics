@@ -1,0 +1,56 @@
+(*@KEY@: RESOURCE
+	NAME: 'STD_RES'
+	TYPE: USER_RESOURCE
+	PLCTYPE: eCLR
+	PROCTYPE: AXC1050_21
+*)
+	(*@KEY@: TASKS NAME: 'Tasks'*)
+		(*@KEY@: TASK NAME: 'STD_TSK'*)
+		(*@KEY@: TASK NAME: 'T1S'*)
+		(*@KEY@: TASK NAME: 'T100MS'*)
+		(*@KEY@: TASK NAME: 'T10MS'*)
+	(*@KEY@: END_TASKS*)
+
+	(*@KEY@: INCLUDE_GLOVAR: 'Global_Variables.GVB'*)
+
+	(*@KEY@: INCLUDE_IOC: 'IOCONFIGURATION.EIO'*)
+
+	(*@KEY@: FILE 'STD_RES.SET'*)
+RESOURCE
+	COMPORT: DLL .\plc\socomm.dll -ip172.26.39.20 -p41100  -TO10000
+END_RESOURCE
+
+	(*@KEY@: END_FILE*)
+
+	(*@KEY@: FILE '@$@$@$@$.SET'*)
+[ONL]
+PERMANENT_AS_BOOTPROJECT=1
+ALWAYS_ALLOW_REALTIME_VIOLATION=0
+DOWNLOAD_SOURCES_WITH_BOOTPROJECT=0
+[Online]
+CNTRL_DLG_PLACEMENT=0,1,-1,-1,-1,-1,1107,31,1291,273
+ONLINE_REPRESENTATION=0,7,3
+ONLINE_DELAY_TIME=10
+DOWNLOAD_DLG_PLACEMENT=0,1,1143,88,-1,-1,524,207,953,568
+Include_Bootproject_001=.\_s49AXL\PNDEV1.xml
+Include_Bootproject_002=.\_s49AXL\config.svc
+Include_Bootproject_003=.\_s49IBG4\data.ini
+Include_Bootproject_004=.\_s49PNIO\pnio.ini
+Include_Bootproject_005=.\_s49PNIO\ippnio.xml
+Include_Bootproject_006=.\_s49PNIO\ippnio.zip
+Include_Bootproject_007=.\_s49IBG4\Project.ini
+PreDownLoadProject_001=.\_s49AXL\PNDEV1.xml
+PreDownLoadProject_002=.\_s49AXL\config.svc
+PreDownLoadProject_003=.\_s49IBG4\data.ini
+PreDownLoadProject_004=.\_s49PNIO\pnio.ini
+PreDownLoadProject_005=.\_s49PNIO\ippnio.xml
+PreDownLoadProject_006=.\_s49PNIO\ippnio.zip
+PreDownLoadProject_007=.\_s49IBG4\Project.ini
+PreDownLoadBootproject_001=.\_s49AXL\AXLDiag.zip
+PreDownLoadBootproject_002=.\_s49AXL\Project.ini
+PreDC_UploadFile_001=data.ini .\_s49IBG4\data_old.ini
+PreDC_UploadFile_002=pnio.ini .\_s49PNIO\pnio_old.ini
+
+	(*@KEY@: END_FILE*)
+
+(*@KEY@: END_RESOURCE*)

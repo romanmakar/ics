@@ -1,0 +1,52 @@
+(*@PROPERTIES_EX@
+TYPE: POU
+LOCALE: 0
+IEC_LANGUAGE: ST
+PLC_TYPE: independent
+PROC_TYPE: independent
+GROUP: MB.FB
+*)
+(*@KEY@:DESCRIPTION*)
+
+(*@KEY@:END_DESCRIPTION*)
+FUNCTION_BLOCK MB_TO_REAL
+
+(*Group:Default*)
+
+
+VAR_INPUT
+	LoWord :	WORD;
+	HiWord :	WORD;
+END_VAR
+
+
+VAR
+	SYS_IEEE_ToReal_1_1 :	SYS_IEEE_ToReal_1;
+END_VAR
+
+
+VAR_OUTPUT
+	OUT :	REAL;
+END_VAR
+
+
+VAR
+	IEEE :	SYS_ARR_B_1_4;
+END_VAR
+
+
+(*@KEY@: WORKSHEET
+NAME: MB_TO_REAL
+IEC_LANGUAGE: ST
+*)
+
+IEEE[1]:= LoWord.B0;
+IEEE[2]:= LoWord.B1;
+IEEE[3]:= HiWord.B0;
+IEEE[4]:= HiWord.B1;
+
+SYS_IEEE_ToReal_1_1(arrIEEE_Float:= IEEE);
+OUT:=SYS_IEEE_ToReal_1_1.rValue;
+
+(*@KEY@: END_WORKSHEET *)
+END_FUNCTION_BLOCK
