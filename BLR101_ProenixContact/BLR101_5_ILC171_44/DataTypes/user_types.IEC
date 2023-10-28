@@ -1,0 +1,538 @@
+(*@PROPERTIES_EX@
+TYPE: DATA_TYPE
+LOCALE: 0
+*)
+(*================================================================================================*)
+(*Cycle Structure*)
+(*================================================================================================*)
+TYPE
+	CCL_CW	:												(*Cycle Control Word*)
+	STRUCT
+		AuxON	     		:	bool;
+		Start   			:	bool;
+		Stop    			:	bool;
+		PulseStart 			:	bool;
+		ACK		 			:	bool;
+		res5				: 	bool;
+		res6				: 	bool;
+		res7				: 	bool;
+		Rotation			: 	bool;
+		res9				: 	bool;
+		res10				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE
+
+TYPE
+	CCL_SW	:												(*Cycle Status Word*)
+	STRUCT
+		ALARM 				:	bool;
+		ON					:	bool;
+		Running				: 	bool;
+		res3				: 	bool;
+		res4				: 	bool;
+		res5				: 	bool;
+		res6				: 	bool;
+		res7				: 	bool;
+		RotationON			: 	bool;
+		res9				: 	bool;
+		res10				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE
+
+TYPE
+	CCL	:												(*Cycle Words*)
+	STRUCT
+		CW	 				:	CCL_CW;
+		SW					:	CCL_SW;
+	END_STRUCT;
+END_TYPE
+
+(*================================================================================================*)
+(*Warning Structure*)
+(*================================================================================================*)
+TYPE
+	WRN:													(*Warning Word*)
+	STRUCT
+		InputVoltage_1		: 	bool;
+		InputVoltage_2		: 	bool;
+		UPS_Fault			: 	bool;
+		UPS_Chrg			: 	bool;
+		UPS_Dischrg			: 	bool;
+		EmergStop			: 	bool;
+		UnautAccess			:	bool;
+		Fire				: 	bool;
+		CO_HL				: 	bool;
+		CO_HH				: 	bool;
+		CH_HH				: 	bool;
+		res10				:	bool;
+		res11				:	bool;
+		res12				:	bool;
+		res13				:	bool;
+		res14				:	bool;
+		res15				:	bool;
+		Pmp21_Dry			:	bool;
+		Pmp22_Dry			:	bool;
+		Pmp23_Dry			:	bool;
+		Pmp24_Dry			:	bool;
+		Pmp25_Dry			:	bool;
+		Pmp21_Leak			:	bool;
+		Pmp22_Leak			:	bool;
+		Pmp23_Leak			:	bool;
+		Pmp24_Leak			:	bool;
+		Pmp25_Leak			:	bool;
+	END_STRUCT;
+END_TYPE
+
+(*================================================================================================*)
+(*Sensor Structure*)
+(*================================================================================================*)
+TYPE 
+	SNSR_CW:												(*Sensor Control Word*)
+	STRUCT
+		FltrEn				:	bool;
+		LimEn				:	bool;
+		SimEn				:	bool;
+		ExtFault			:	bool;
+		res4				:	bool;
+		res5				:	bool;
+		res6				:	bool;
+		res7				:	bool;
+		bar_kgf				: 	bool;
+		res9				: 	bool;
+		res10				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE
+
+TYPE 
+	SNSR_SW:												(*Sensor Status Word*)
+	STRUCT
+		Fault				: 	bool;
+		HH_alarm			: 	bool;
+		HL_alarm			: 	bool;
+		LH_alarm			: 	bool;
+		LL_alarm			: 	bool;
+		res5				: 	bool;
+		res6				: 	bool;
+		res7				: 	bool;
+		res8				: 	bool;
+		res9				:	bool;
+		res10				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE		
+
+TYPE 
+	SNSR_EVENT:												(*Sensor Pulse Status*)
+	STRUCT
+		Fault				: 	bool;
+		HH					: 	bool;
+		HL					: 	bool;
+		LH					: 	bool;
+		LL					: 	bool;
+		res5				: 	bool;
+		res6				: 	bool;
+		res7				: 	bool;
+		res8				: 	bool;
+		res9				:	bool;
+		res10				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE		
+
+		
+TYPE 
+	SNSR:													(*Sensor Structure*)
+	STRUCT
+		CW					: 	SNSR_CW;
+		SW					: 	SNSR_SW;
+		Ymin				: 	real;
+		Ymax				: 	real;
+		ADC_Range			: 	int;
+		SamplingTime		: 	int;
+		HH					: 	real;
+		HL					: 	real;
+		LH					: 	real;
+		LL					: 	real;
+		DeadBand			: 	real;
+		LimDelay			: 	int;
+		DiagCode			: 	word;
+		res1				: 	real;
+		PIW					: 	int;
+		IntValue			: 	int;
+		RealValue			: 	real;
+		SimValue			: 	real;
+		AccumDir			: 	real;
+		AccumRev			: 	real;
+	END_STRUCT;
+END_TYPE
+
+TYPE
+	SNSR_BUFF: ARRAY [0..9] OF REAL;
+END_TYPE
+
+TYPE
+	SNSR_MISC:												(*Sensor Miscellaneous*)
+	STRUCT
+		SamplingTickCount	:	int;
+		HHTopDelayCount		:	int;
+		HHBotDelayCount		:	int;
+		HLTopDelayCount		:	int;
+		HLBotDelayCount		:	int;
+		LHTopDelayCount		:	int;
+		LHBotDelayCount		:	int;
+		LLTopDelayCount		:	int;
+		LLBotDelayCount		:	int;
+
+		EVENT_1				:	bool;
+		EVENT_2				:	bool;
+		EVENT_3				:	bool;
+		EVENT_4				:	bool;
+		EVENT_5				:	bool;
+	END_STRUCT;
+END_TYPE
+	
+(*================================================================================================*)
+(*Motor Structure*)
+(*================================================================================================*)
+TYPE
+	MTR_CW:													(*Motor Control Word*)
+	STRUCT
+		Enable				:	bool;
+		AuxON				:	bool;
+		ExtraAlarm			: 	bool;
+		ACK					: 	bool;
+		ManMode				: 	bool;
+		AutoMode			:	bool;
+		ManStart			: 	bool;
+		ManStop				:	bool;
+		AutoON				: 	bool;
+		ExtraEn				: 	bool;
+		res10				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		SimEn				: 	bool;
+	END_STRUCT;
+END_TYPE
+
+TYPE
+	MTR_SW:													(*Motor Status Word*)
+	STRUCT
+		Rem					: 	bool;
+		ManAuto				: 	bool;
+		RUN					: 	bool;
+		COM					: 	bool;
+		AlarmAccum			: 	bool;
+		Ready				: 	bool;
+		res6				: 	bool;
+		res7				: 	bool;
+		ManOK				: 	bool;
+		AutoOK				: 	bool;
+		RunManual			: 	bool;
+		RunAuto				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE
+
+TYPE 
+	MTR_EVENT:												(*Motor Pulse Status*)
+	STRUCT
+		AlarmAccum			: 	bool;
+		res1				: 	bool;
+		res2				: 	bool;
+		res3				: 	bool;
+		res4				: 	bool;
+		res5				: 	bool;
+		res6				: 	bool;
+		res7				: 	bool;
+		res8				: 	bool;
+		res9				:	bool;
+		res10				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE
+
+TYPE 
+	MTR:													(*Motor Structure*)
+	STRUCT
+		CW					: 	MTR_CW;
+		SW					: 	MTR_SW;
+		MinFreq				: 	real;
+		MaxFreq				: 	real;
+		ManFreq				: 	real;
+		AutoFreq			: 	real;
+		ActFreq				: 	real;
+		Current				: 	real;
+		Power				: 	real;
+		HeatSinkTemp		:	real;
+		RunHours			: 	real;
+		kWhCount			: 	real;
+		Status				: 	word;
+		FC_StatusWord		: 	word;
+		FC_AlarmWord		: 	dword;
+		FC_WarnWord			: 	dword;
+		FC_ErrCode			: 	word;
+		Index				: 	word;
+		res1				: 	real;
+	END_STRUCT;
+END_TYPE
+
+TYPE
+	MTR_MISC:												(*Motor Miscellaneous*)
+	STRUCT
+		LocStop				:	bool;
+		DirLock				:	bool;
+		FCRun				:	bool;
+		DirRun				:	bool;
+		COM					:	bool;
+		AlarmFeedBack		:	bool;
+		AlarmBlock			:	bool;
+		DryMoveFault		:	bool;
+		DiffPressFault		:	bool;
+		TempFault			:	bool;
+		Tick_1S				:	bool;
+		AuxFlag				:	bool;
+		CT1_ON				:	bool;
+		CT2_ON				:	bool;
+		StartReq			:	bool;
+		StopReq				:	bool;
+
+		SetOvertime			:	int;
+		AlrmTickCount		:	int;
+		SetValue			:	real;
+		Seconds				:	udint;
+		Minutes				:	udint;
+		Hours				:	udint;
+		Days				:	udint;
+		CT1					:	int;
+		CT2					:	int;
+
+		EVENT_1				:	bool;
+		EVENT_2				:	bool;
+		EVENT_3				:	bool;
+	END_STRUCT;
+END_TYPE
+
+(*================================================================================================*)
+(*Valve Structure*)
+(*================================================================================================*)
+TYPE
+	VLV_CW:													(*Valve Control Word*)
+	STRUCT
+		Enable				: 	bool;
+		AuxON				:	bool;
+		ExtraAlarm			: 	bool;
+		ACK					: 	bool;
+		ManMode				: 	bool;
+		AutoMode			: 	bool;
+		ManOpen				: 	bool;
+		Stop				: 	bool;
+		ManClose			: 	bool;
+		AutoOpen			: 	bool;
+		AutoClose			: 	bool;
+		ExtraEn				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		SimEn				: 	bool;
+	END_STRUCT;
+END_TYPE
+
+TYPE
+	VLV_SW:													(*Valve Status Word*)
+	STRUCT
+		Rem					: 	bool;
+		ManAuto				: 	bool;
+		RUN					: 	bool;
+		COM_Open			: 	bool;
+		COM_Close			: 	bool;
+		Opened				: 	bool;
+		Closed				: 	bool;
+		AlarmAccum			: 	bool;
+		ManOK				: 	bool;
+		AutoOK				: 	bool;
+		RunManual			: 	bool;
+		RunAuto				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE
+
+TYPE 
+	VLV:													(*Valve Structure*)
+	STRUCT
+		CW					: 	VLV_CW;
+		SW					: 	VLV_SW;
+		SetPos				: 	real;
+		ActPos				: 	real;
+		Status				: 	word;
+		res0				: 	word;
+		res1				: 	real;
+		res2				: 	real;
+		res3				: 	real;
+		res4				: 	real;		
+	END_STRUCT;
+END_TYPE
+
+TYPE
+	VLV_MISC:												(*Valve Miscellaneous*)
+	STRUCT
+		Tick_1S				:	bool;
+		AlarmFeedBack		:	bool;
+		AlarmNotMove		:	bool;
+		AlarmBlock			:	bool;
+		AlarmSQ				:	bool;
+		AuxFlag				:	bool;
+		COM_Open			: 	bool;
+		COM_Close			: 	bool;
+
+		SetOvertime			:	int;
+		FbAlarmTickCount	:	int;
+		MoveAlarmTickCount	:	int;
+	END_STRUCT;
+END_TYPE
+
+(*================================================================================================*)
+(*PID Structure*)
+(*================================================================================================*)
+TYPE 
+	REG_CW:													(*Regulator Control Word*)
+	STRUCT
+		En					: 	bool;
+		ManMode				: 	bool;
+		Reset				: 	bool;
+		Hold				:	bool;
+		res4				: 	bool;
+		res5				: 	bool;
+		res6				: 	bool;
+		res7				: 	bool;
+		res8				: 	bool;
+		res9				: 	bool;
+		res10				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		SimEn				: 	bool;
+	END_STRUCT;
+END_TYPE
+
+TYPE 
+	REG_SW:													(*Regulator Status Word*)
+	STRUCT
+		Error				: 	bool;
+		LH					: 	bool;
+		LL					: 	bool;
+		res3				: 	bool;
+		res4				: 	bool;
+		res5				: 	bool;
+		res6				: 	bool;
+		res7				: 	bool;
+		res8				: 	bool;
+		res9				: 	bool;
+		res10				: 	bool;
+		res11				: 	bool;
+		res12				: 	bool;
+		res13				: 	bool;
+		res14				: 	bool;
+		res15				: 	bool;
+	END_STRUCT;
+END_TYPE		
+		
+TYPE 
+	REG:													(*Regulator Structure*)
+	STRUCT
+		CW					: 	REG_CW;
+		SW					: 	REG_SW;
+		SP					: 	real;
+		Kp					: 	real;
+		Tn					: 	real;
+		Tv					: 	real;
+		Td					: 	real;
+		Offset				: 	real;
+		ManVal				: 	real;
+		LH					: 	real;
+		LL					: 	real;
+		Y					: 	real;
+		DIFF				: 	real;
+		ActVal				: 	real;
+		DeadBand			: 	real;
+		res0				: 	real;
+		res1				: 	real;
+	END_STRUCT;
+END_TYPE
+
+
+
+(*================================================================================================*)
+(*Total Arrays*)
+(*================================================================================================*)
+
+TYPE
+	CYCLE					: ARRAY [0..4] OF CCL;
+
+	SENSOR 					: ARRAY [0..49] OF SNSR;
+	SENSOR_BUFF				: ARRAY [0..49] OF SNSR_BUFF;
+	SENSOR_EVENT 			: ARRAY [0..49] OF SNSR_EVENT;
+	SENSOR_MISC 			: ARRAY [0..49] OF SNSR_MISC;
+
+
+	MOTOR 					: ARRAY [0..9] OF MTR;
+	MOTOR_EVENT				: ARRAY [0..9] OF MTR_EVENT;
+	MOTOR_MISC				: ARRAY [0..9] OF MTR_MISC;
+
+	VALVE 					: ARRAY [0..9] OF VLV;
+	VALVE_MISC				: ARRAY [0..9] OF VLV_MISC;
+
+	REGULATOR				: ARRAY [0..9] OF REG;
+END_TYPE
+
+(*================================================================================================*)
+(**)
+(*================================================================================================*)
+
+
+TYPE
+	MBRTU_SlvAddr			: ARRAY [0..15] OF UINT;
+	
+	RegAddr					: ARRAY [0..31] OF UINT;
+	MBRTU_RegAddr			: ARRAY [0..15] OF RegAddr;
+
+	SlvData					: ARRAY [0..63] OF WORD;
+	MBRTU_SlvData			: ARRAY [0..15] OF SlvData;
+END_TYPE
+
+			
