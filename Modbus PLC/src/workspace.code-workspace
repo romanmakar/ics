@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\.."
+		},
+		{
+			"name": "Modbus PLC",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
