@@ -8346,7 +8346,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 1 </xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 1 </xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_2" address="%MD20011">
@@ -8354,7 +8354,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 2</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 2</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_3" address="%MD20012">
@@ -8362,7 +8362,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 3</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 3</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_4" address="%MD20013">
@@ -8370,7 +8370,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 4</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 4</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_5" address="%MD20014">
@@ -8378,7 +8378,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 5</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 5</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_6" address="%MD20015">
@@ -8386,7 +8386,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 6</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 6</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_7" address="%MD20016">
@@ -8394,7 +8394,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 7</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 7</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_8" address="%MD20017">
@@ -8402,7 +8402,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 8</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 8</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_9" address="%MD20018">
@@ -8410,7 +8410,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 9</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 9</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_10" address="%MD20019">
@@ -8418,7 +8418,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 10</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 10</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_11" address="%MD20020">
@@ -8426,7 +8426,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 11</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 11</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_12" address="%MD20021">
@@ -8434,7 +8434,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 12</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 12</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_13" address="%MD20022">
@@ -8442,7 +8442,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 13</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 13</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_14" address="%MD20023">
@@ -8450,7 +8450,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 14</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 14</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_15" address="%MD20024">
@@ -8458,7 +8458,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 15</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 15</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_16" address="%MD20025">
@@ -8466,7 +8466,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 16</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 16</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_17" address="%MD20026">
@@ -8474,7 +8474,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 17</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 17</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_18" address="%MD20027">
@@ -8482,7 +8482,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 18</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 18</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_19" address="%MD20028">
@@ -8490,7 +8490,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 19</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 19</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_20" address="%MD20029">
@@ -8498,7 +8498,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 20</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 20</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_21" address="%MD20030">
@@ -8506,7 +8506,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 21</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 21</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_22" address="%MD20031">
@@ -8514,7 +8514,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 22</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 22</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_23" address="%MD20032">
@@ -8522,7 +8522,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 23</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 23</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_24" address="%MD20033">
@@ -8530,7 +8530,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 24</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 24</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_25" address="%MD20034">
@@ -8538,7 +8538,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 25</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 25</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_26" address="%MD20035">
@@ -8546,7 +8546,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 26</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 26</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_27" address="%MD20036">
@@ -8554,7 +8554,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 27</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 27</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_28" address="%MD20037">
@@ -8562,7 +8562,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 28</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 28</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_29" address="%MD20038">
@@ -8570,7 +8570,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 29</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 29</xhtml>
               </documentation>
             </variable>
             <variable name="rTmp_30" address="%MD20039">
@@ -8578,7 +8578,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Температура 30</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Temperature 30</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_1" address="%MD10020">
@@ -8586,7 +8586,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _1</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _1</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_1" address="%MD10021">
@@ -8594,7 +8594,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _1</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _1</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_2" address="%MD10022">
@@ -8602,7 +8602,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _2</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _2</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_2" address="%MD10023">
@@ -8610,7 +8610,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _2</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _2</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_3" address="%MD10024">
@@ -8618,7 +8618,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _3</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _3</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_3" address="%MD10025">
@@ -8626,7 +8626,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _3</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _3</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_4" address="%MD10026">
@@ -8634,7 +8634,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _4</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _4</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_4" address="%MD10027">
@@ -8642,7 +8642,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _4</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _4</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_5" address="%MD10028">
@@ -8650,7 +8650,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _5</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _5</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_5" address="%MD10029">
@@ -8658,7 +8658,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _5</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _5</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_6" address="%MD10030">
@@ -8666,7 +8666,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _6</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _6</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_6" address="%MD10031">
@@ -8674,7 +8674,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _6</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _6</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_7" address="%MD10032">
@@ -8682,7 +8682,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _7</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _7</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_7" address="%MD10033">
@@ -8690,7 +8690,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _7</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _7</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_8" address="%MD10034">
@@ -8698,7 +8698,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _8</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _8</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_8" address="%MD10035">
@@ -8706,7 +8706,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _8</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _8</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_9" address="%MD10036">
@@ -8714,7 +8714,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _9</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _9</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_9" address="%MD10037">
@@ -8722,7 +8722,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _9</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _9</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_10" address="%MD10038">
@@ -8730,7 +8730,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _10</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _10</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_10" address="%MD10039">
@@ -8738,7 +8738,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _10</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _10</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_11" address="%MD10040">
@@ -8746,7 +8746,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _11</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _11</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_11" address="%MD10041">
@@ -8754,7 +8754,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _11</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _11</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_12" address="%MD10042">
@@ -8762,7 +8762,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _12</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _12</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_12" address="%MD10043">
@@ -8770,7 +8770,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _12</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _12</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_13" address="%MD10044">
@@ -8778,7 +8778,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _13</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _13</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_13" address="%MD10045">
@@ -8786,7 +8786,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _13</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _13</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_14" address="%MD10046">
@@ -8794,7 +8794,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _14</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _14</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_14" address="%MD10047">
@@ -8802,7 +8802,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _14</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _14</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_15" address="%MD10048">
@@ -8810,7 +8810,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _15</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _15</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_15" address="%MD10049">
@@ -8818,7 +8818,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _15</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _15</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_16" address="%MD10050">
@@ -8826,7 +8826,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _16</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _16</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_16" address="%MD10051">
@@ -8834,7 +8834,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _16</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _16</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_17" address="%MD10052">
@@ -8842,7 +8842,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _17</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _17</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_17" address="%MD10053">
@@ -8850,7 +8850,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _17</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _17</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_18" address="%MD10054">
@@ -8858,7 +8858,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _18</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _18</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_18" address="%MD10055">
@@ -8866,7 +8866,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _18</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _18</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_19" address="%MD10056">
@@ -8874,7 +8874,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _19</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _19</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_19" address="%MD10057">
@@ -8882,7 +8882,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _19</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _19</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_20" address="%MD10058">
@@ -8890,7 +8890,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _20</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _20</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_20" address="%MD10059">
@@ -8898,7 +8898,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _20</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _20</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_21" address="%MD10060">
@@ -8906,7 +8906,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _21</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _21</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_21" address="%MD10061">
@@ -8914,7 +8914,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _21</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _21</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_22" address="%MD10062">
@@ -8922,7 +8922,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _22</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _22</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_22" address="%MD10063">
@@ -8930,7 +8930,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _22</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _22</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_23" address="%MD10064">
@@ -8938,7 +8938,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _23</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _23</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_23" address="%MD10065">
@@ -8946,7 +8946,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _23</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _23</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_24" address="%MD10066">
@@ -8954,7 +8954,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _24</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _24</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_24" address="%MD10067">
@@ -8962,7 +8962,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _24</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _24</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_25" address="%MD10068">
@@ -8970,7 +8970,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _25</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _25</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_25" address="%MD10069">
@@ -8978,7 +8978,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _25</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _25</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_26" address="%MD10070">
@@ -8986,7 +8986,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _26</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _26</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_26" address="%MD10071">
@@ -8994,7 +8994,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _26</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _26</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_27" address="%MD10072">
@@ -9002,7 +9002,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _27</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _27</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_27" address="%MD10073">
@@ -9010,7 +9010,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _27</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _27</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_28" address="%MD10074">
@@ -9018,7 +9018,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _28</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _28</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_28" address="%MD10075">
@@ -9026,7 +9026,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _28</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _28</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_29" address="%MD10076">
@@ -9034,7 +9034,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _29</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _29</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_29" address="%MD10077">
@@ -9042,7 +9042,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _29</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _29</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpK_30" address="%MD10078">
@@ -9050,7 +9050,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Температура _30</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Temperature _30</xhtml>
               </documentation>
             </variable>
             <variable name="rTmpB_30" address="%MD10079">
@@ -9058,7 +9058,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Температура _30</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Temperature _30</xhtml>
               </documentation>
             </variable>
             <variable name="iPrsRaw_1" address="%MW41410">
@@ -9146,7 +9146,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Давление 1</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Pressure 1</xhtml>
               </documentation>
             </variable>
             <variable name="rPrs_2" address="%MD20001">
@@ -9154,7 +9154,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Давление 2</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Pressure 2</xhtml>
               </documentation>
             </variable>
             <variable name="rPrs_3" address="%MD20002">
@@ -9162,7 +9162,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Давление 3</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Pressure 3</xhtml>
               </documentation>
             </variable>
             <variable name="rPrs_4" address="%MD20003">
@@ -9170,7 +9170,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Давление 4</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Pressure 4</xhtml>
               </documentation>
             </variable>
             <variable name="rPrs_5" address="%MD20004">
@@ -9178,7 +9178,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Давление 5</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Pressure 5</xhtml>
               </documentation>
             </variable>
             <variable name="rPrs_6" address="%MD20005">
@@ -9186,7 +9186,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Давление 6</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Pressure 6</xhtml>
               </documentation>
             </variable>
             <variable name="rPrs_7" address="%MD20006">
@@ -9194,7 +9194,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Давление 7</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Pressure 7</xhtml>
               </documentation>
             </variable>
             <variable name="rPrs_8" address="%MD20007">
@@ -9202,7 +9202,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Давление 8</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Pressure 8</xhtml>
               </documentation>
             </variable>
             <variable name="rPrs_9" address="%MD20008">
@@ -9210,7 +9210,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Давление 9</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Pressure 9</xhtml>
               </documentation>
             </variable>
             <variable name="rPrs_10" address="%MD20009">
@@ -9218,7 +9218,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Давление 10</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Pressure 10</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsK_1" address="%MD10000">
@@ -9226,7 +9226,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Давление 1</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Pressure 1</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsB_1" address="%MD10001">
@@ -9234,7 +9234,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Давление 1</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Pressure 1</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsK_2" address="%MD10002">
@@ -9242,7 +9242,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Давление 2</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Pressure 2</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsB_2" address="%MD10003">
@@ -9250,7 +9250,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Давление 2</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Pressure 2</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsK_3" address="%MD10004">
@@ -9258,7 +9258,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Давление 3</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Pressure 3</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsB_3" address="%MD10005">
@@ -9266,7 +9266,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Давление 3</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Pressure 3</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsK_4" address="%MD10006">
@@ -9274,7 +9274,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Давление 4</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Pressure 4</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsB_4" address="%MD10007">
@@ -9282,7 +9282,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Давление 4</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Pressure 4</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsK_5" address="%MD10008">
@@ -9290,7 +9290,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Давление 5</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Pressure 5</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsB_5" address="%MD10009">
@@ -9298,7 +9298,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Давление 5</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Pressure 5</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsK_6" address="%MD10010">
@@ -9306,7 +9306,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Давление 6</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Pressure 6</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsB_6" address="%MD10011">
@@ -9314,7 +9314,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Давление 6</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Pressure 6</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsK_7" address="%MD10012">
@@ -9322,7 +9322,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Давление 7</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Pressure 7</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsB_7" address="%MD10013">
@@ -9330,7 +9330,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Давление 7</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Pressure 7</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsK_8" address="%MD10014">
@@ -9338,7 +9338,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Давление 8</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Pressure 8</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsB_8" address="%MD10015">
@@ -9346,7 +9346,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Давление 8</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Pressure 8</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsK_9" address="%MD10016">
@@ -9354,7 +9354,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Давление 9</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Pressure 9</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsB_9" address="%MD10017">
@@ -9362,7 +9362,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Давление 9</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Pressure 9</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsK_10" address="%MD10018">
@@ -9370,7 +9370,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Давление 10</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Pressure 10</xhtml>
               </documentation>
             </variable>
             <variable name="rPrsB_10" address="%MD10019">
@@ -9378,7 +9378,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Давление 10				</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Pressure 10				</xhtml>
               </documentation>
             </variable>
             <variable name="iLvlRaw_1" address="%MW41450">
@@ -9434,7 +9434,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Уровень 1</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Level 1</xhtml>
               </documentation>
             </variable>
             <variable name="rLvl_2" address="%MD20041">
@@ -9442,7 +9442,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Уровень 2</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Level 2</xhtml>
               </documentation>
             </variable>
             <variable name="rLvl_3" address="%MD20042">
@@ -9450,7 +9450,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Уровень 3</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Level 3</xhtml>
               </documentation>
             </variable>
             <variable name="rLvl_4" address="%MD20043">
@@ -9458,7 +9458,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Уровень 4</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Level 4</xhtml>
               </documentation>
             </variable>
             <variable name="rLvl_5" address="%MD20044">
@@ -9466,7 +9466,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Уровень 5</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Level 5</xhtml>
               </documentation>
             </variable>
             <variable name="rLvl_6" address="%MD20045">
@@ -9474,7 +9474,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Уровень 6</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Level 6</xhtml>
               </documentation>
             </variable>
             <variable name="rLvlK_1" address="%MD10080">
@@ -9482,7 +9482,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Уровень 1</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Level 1</xhtml>
               </documentation>
             </variable>
             <variable name="rLvlB_1" address="%MD10081">
@@ -9490,7 +9490,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Уровень 1</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Level 1</xhtml>
               </documentation>
             </variable>
             <variable name="rLvlK_2" address="%MD10082">
@@ -9498,7 +9498,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Уровень 2</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Level 2</xhtml>
               </documentation>
             </variable>
             <variable name="rLvlB_2" address="%MD10083">
@@ -9506,7 +9506,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Уровень 2</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Level 2</xhtml>
               </documentation>
             </variable>
             <variable name="rLvlK_3" address="%MD10084">
@@ -9514,7 +9514,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Уровень 3</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Level 3</xhtml>
               </documentation>
             </variable>
             <variable name="rLvlB_3" address="%MD10085">
@@ -9522,7 +9522,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Уровень 3</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Level 3</xhtml>
               </documentation>
             </variable>
             <variable name="rLvlK_4" address="%MD10086">
@@ -9530,7 +9530,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Уровень 4</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Level 4</xhtml>
               </documentation>
             </variable>
             <variable name="rLvlB_4" address="%MD10087">
@@ -9538,7 +9538,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Уровень 4</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Level 4</xhtml>
               </documentation>
             </variable>
             <variable name="rLvlK_5" address="%MD10088">
@@ -9546,7 +9546,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Уровень 5</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Level 5</xhtml>
               </documentation>
             </variable>
             <variable name="rLvlB_5" address="%MD10089">
@@ -9554,7 +9554,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Уровень 5</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Level 5</xhtml>
               </documentation>
             </variable>
             <variable name="rLvlK_6" address="%MD10090">
@@ -9562,7 +9562,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент К Уровень 6</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor К Level 6</xhtml>
               </documentation>
             </variable>
             <variable name="rLvlB_6" address="%MD10091">
@@ -9570,7 +9570,7 @@ W=&gt; wErrOthr);
                 <REAL />
               </type>
               <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Коэффициент В Уровень 6</xhtml>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">	Factor В Level 6</xhtml>
               </documentation>
             </variable>
             <variable name="fb_Tmp_1">
@@ -10226,9 +10226,9 @@ rTmpK_7:=0;
 rTmpB_7:=0;
 rTmpK_8:=0;
 rTmpB_8:=0;*)
-rTmpK_9:=1000;		//Температура воздуха в помещении
+rTmpK_9:=1000;
 rTmpB_9:=0;
-rTmpK_10:=100; 		//Температура воздуха в помещении
+rTmpK_10:=100;
 rTmpB_10:=0;(*
 rTmpK_11:=0;
 rTmpB_11:=0;
@@ -10243,7 +10243,7 @@ rTmpB_15:=0;
 rTmpK_16:=0;
 rTmpB_16:=0;
 *)
-rPrsK_1:=16;		//Давление воды 
+rPrsK_1:=16;
 rPrsB_1:=0;
 rPrsK_2:=16;
 rPrsB_2:=0;
@@ -10565,7 +10565,7 @@ fb_Lvl_6(
                 <comment localId="6" height="0" width="0">
                   <position x="27" y="6" />
                   <content>
-                    <xhtml xmlns="http://www.w3.org/1999/xhtml">Давление воды на выходе</xhtml>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">Pressure воды на выходе</xhtml>
                   </content>
                 </comment>
                 <inVariable localId="7">
@@ -10627,7 +10627,7 @@ fb_Lvl_6(
                 <comment localId="15" height="0" width="0">
                   <position x="27" y="9" />
                   <content>
-                    <xhtml xmlns="http://www.w3.org/1999/xhtml">Уровень РЧВ</xhtml>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">Level РЧВ</xhtml>
                   </content>
                 </comment>
                 <inVariable localId="16">
@@ -10675,7 +10675,7 @@ fb_Lvl_6(
                 <comment localId="22" height="0" width="0">
                   <position x="27" y="12" />
                   <content>
-                    <xhtml xmlns="http://www.w3.org/1999/xhtml">Давление воды на входе</xhtml>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">Pressure воды на входе</xhtml>
                   </content>
                 </comment>
                 <inVariable localId="23">
@@ -10723,7 +10723,7 @@ fb_Lvl_6(
                 <comment localId="29" height="0" width="0">
                   <position x="27" y="15" />
                   <content>
-                    <xhtml xmlns="http://www.w3.org/1999/xhtml">Температура воздуха в помещении</xhtml>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">Temperature воздуха в помещении</xhtml>
                   </content>
                 </comment>
                 <inVariable localId="30">
