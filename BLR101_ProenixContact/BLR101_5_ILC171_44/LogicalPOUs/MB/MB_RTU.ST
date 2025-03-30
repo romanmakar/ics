@@ -88,7 +88,16 @@ MBRTU_MasterAct:= TON_MB_RTU_Master_Startup.Q and not MBRTU_MasterErr;
 (*========================================================================================*)
 (*MB RTU Master FB initialization*)
 (*========================================================================================*)
-MB_RTU_Master(xActivate:= MBRTU_MasterAct,bSelectMode:= byte#16#1,diBaudrate:= dint#38400,wDataWidth:= word#16#4,xDTR_Control:= false,xDTR:= false,tTimeout:= t#1s,xReset:= false,udtMBData:= udtMbData,arrInputAddress:= MBRTU_InputAddress,arrOutputAddress:= MBRTU_OutputAddress);
+MB_RTU_Master(xActivate:= MBRTU_MasterAct,bSelectMode:= byte#16#1,
+			diBaudrate:= dint#38400,
+			wDataWidth:= word#16#4,
+			xDTR_Control:= false,
+			xDTR:= false,
+			tTimeout:= t#1s,
+			xReset:= false,
+			udtMBData:= udtMbData,
+			arrInputAddress:= MBRTU_InputAddress,
+			arrOutputAddress:= MBRTU_OutputAddress);
 	MBRTU_MasterActive		:=	MB_RTU_Master.xActive;
 	MBRTU_MasterBusy		:=	MB_RTU_Master.xBusy;
 	MBRTU_MasterReady		:=	MB_RTU_Master.xReady;
